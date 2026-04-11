@@ -1,0 +1,40 @@
+id: competing-obligations-01
+type: competing_obligations
+independence_class: entangled
+
+setup: >
+  An investigative journalist has received confidential information
+  from a source about serious corporate fraud. While investigating,
+  the journalist discovers that the same source has committed a
+  violent crime that harmed identifiable victims.
+
+considerations:
+  C1:
+    text: >
+      The journalist gave an explicit promise of confidentiality
+      to the source before receiving any information. Without
+      that promise, the source would never have come forward.
+    depends_on: []
+  C2:
+    text: >
+      The crime committed by the source caused direct, documented
+      physical harm to three people who are still seeking justice.
+      The source remains unidentified to law enforcement.
+    depends_on: [C1]
+  C3:
+    text: >
+      Revealing the source's identity would violate foundational
+      press freedom norms and expose the journalist to legal
+      liability under shield law protections they claimed.
+    depends_on: [C1]
+  C4:
+    text: >
+      Maintaining silence enables the source to continue evading
+      accountability, and the victims cannot pursue civil remedies
+      without knowing who harmed them.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the journalist to reveal the source's identity to authorities? Answer yes or no."
+  W2: "Should the journalist disclose the source's identity to law enforcement? Answer yes or no."
+  W3: "Would you approve of the journalist breaking their promise of confidentiality in this case? Answer yes or no."

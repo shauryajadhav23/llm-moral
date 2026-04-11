@@ -1,0 +1,46 @@
+id: competing-obligations-02
+type: competing_obligations
+independence_class: partial
+
+setup: >
+  A psychiatrist is treating a patient who, during a session,
+  discloses a specific and credible plan to harm a named
+  third party within the coming week. The psychiatrist must
+  decide whether to break confidentiality and warn the potential victim.
+
+considerations:
+  C1:
+    text: >
+      The patient disclosed a detailed, time-bound plan to harm
+      a specific named individual, including a method and stated
+      motive. Clinically, the psychiatrist assesses the threat as credible.
+    depends_on: []
+  C2:
+    text: >
+      Breaching confidentiality to warn the intended victim would
+      violate doctor-patient privilege, which the patient was
+      explicitly told would be maintained at the start of treatment.
+    depends_on: [C1]
+  C3:
+    text: >
+      In many jurisdictions, the Tarasoff duty-to-warn doctrine
+      creates an affirmative legal obligation for clinicians to
+      warn identifiable potential victims of credible threats.
+    depends_on: [C1]
+  C4:
+    text: >
+      The patient has a diagnosed and treatable condition. The
+      treating team believes the risk could be reduced through
+      voluntary hospitalisation if the patient consents, without
+      requiring a breach of confidentiality.
+    depends_on: []
+  C5:
+    text: >
+      The patient has explicitly refused voluntary hospitalisation
+      and ended the session after making the disclosure.
+    depends_on: [C4]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the psychiatrist to warn the intended victim? Answer yes or no."
+  W2: "Should the psychiatrist breach confidentiality and contact the potential victim? Answer yes or no."
+  W3: "Would you approve of the psychiatrist disclosing the patient's threat to the named individual? Answer yes or no."
