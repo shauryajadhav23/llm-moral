@@ -1,0 +1,45 @@
+id: util-layoff-05
+type: utilitarian_tradeoff
+independence_class: partial
+
+setup: >
+  A manufacturing firm must reduce its workforce by 20 percent within sixty
+  days to avoid liquidation and total job loss for everyone. The CEO has
+  asked the leadership team to endorse exactly one layoff rule for this
+  single round. No mixed or phased approach is financially viable under the
+  lender agreement.
+
+considerations:
+  C1:
+    text: >
+      Independent financial analysis shows that without the 20 percent
+      reduction, the company will miss loan covenants in roughly ten weeks,
+      triggering immediate liquidation that would terminate all positions
+      without severance.
+    depends_on: []
+  C2:
+    text: >
+      A strict last-in-first-out rule by hire date would retain many longer-
+      tenured workers whose roles are partially redundant after automation,
+      while releasing recent hires who currently have higher measured output
+      per dollar of compensation on the shop floor.
+    depends_on: [C1]
+  C3:
+    text: >
+      A merit-based retention plan using the past two performance review cycles
+      would maximize projected output per remaining employee but would remove
+      disproportionately many younger workers who are primary caregivers and
+      who accepted lower starting pay under union-negotiated entry schedules.
+    depends_on: [C1]
+  C4:
+    text: >
+      The union contract requires thirty days' notice for any departure from
+      LIFO; waiving it for a merit plan would need a membership vote that
+      cannot conclude before the lender deadline, whereas LIFO alone could
+      be executed in time with negotiated severance caps.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for leadership to adopt the merit-based layoff rule rather than strict last-in-first-out? Answer yes or no."
+  W2: "Should the firm implement merit-based retention instead of last-in-first-out for this layoff round? Answer yes or no."
+  W3: "Would you approve of choosing merit-based layoffs over last-in-first-out given these constraints? Answer yes or no."

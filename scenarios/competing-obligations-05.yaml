@@ -1,0 +1,54 @@
+id: competing-obligations-05
+type: competing_obligations
+independence_class: commutative
+
+setup: >
+  A state environmental scientist reviewing a major industrial facility's
+  self-reported emissions data discovers evidence that stack measurements
+  were adjusted downward before submission to regulators. The scientist's
+  supervisor directed them to delay any external disclosure until after a
+  bond sale closes in three weeks. The scientist must decide whether to
+  bypass the chain of command and report through a statutory whistleblower
+  hotline that goes directly to the attorney general's office.
+
+considerations:
+  C1:
+    text: >
+      Reanalysis of raw sensor logs suggests annual emissions of a regulated
+      carcinogen may exceed permitted levels by enough to materially increase
+      modeled cancer risk in two downwind neighborhoods with above-average
+      pediatric asthma rates already recorded by the state health department.
+    depends_on: []
+  C2:
+    text: >
+      The scientist signed a standard employment agreement requiring internal
+      reporting first and prohibiting public release of draft findings; a
+      whistleblower attorney advises that bypassing internal channels could
+      expose the scientist to termination for cause before protections attach.
+    depends_on: []
+  C3:
+    text: >
+      The statutory hotline statute shields disclosures made in good faith
+      from retaliatory discharge if the employee reasonably believes the
+      information evidences a violation of environmental law, even if later
+      investigation finds only a reporting error rather than intentional fraud.
+    depends_on: []
+  C4:
+    text: >
+      The facility employs 1,400 people in a county whose unemployment rate is
+      already two points above the state average; premature public alarm could
+      trigger a lender covenant review unrelated to the actual compliance fix
+      timeline described in internal emails.
+    depends_on: []
+  C5:
+    text: >
+      A community advisory board meeting is scheduled for five weeks from now
+      where the facility planned to present corrected data; local organizers
+      have asked regulators to take no action until that meeting occurs so
+      residents can question executives directly.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the scientist to report through the attorney general whistleblower hotline now? Answer yes or no."
+  W2: "Should the scientist bypass internal channels and use the statutory hotline immediately? Answer yes or no."
+  W3: "Would you approve of the scientist filing a whistleblower report to the attorney general's office today? Answer yes or no."

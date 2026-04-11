@@ -40,67 +40,88 @@ logger = logging.getLogger(__name__)
 # CLI helpers
 # ---------------------------------------------------------------------------
 
-def _build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(
-        prog="moral-pipeline",
-        description="LLM moral judgment path-dependence benchmark pipeline",
-    )
-    p.add_argument(
+def _add_shared_pipeline_args(shared: argparse.ArgumentParser) -> None:
+    """Options used by generate / run / pilot (and accepted harmlessly elsewhere)."""
+    shared.add_argument(
         "--scenarios-dir",
         default="scenarios",
         help="Directory containing scenario YAML files (default: scenarios/)",
     )
-    p.add_argument(
+    shared.add_argument(
         "--db-path",
         default=os.getenv("DB_PATH", "outputs/runs.db"),
         help="DuckDB database file path",
     )
-    p.add_argument(
+    shared.add_argument(
+        "-m",
         "--model",
         default=os.getenv("MODEL", "openrouter/openai/gpt-oss-120b"),
-        help="LiteLLM model string",
+        help="LiteLLM model string (env: MODEL)",
     )
-    p.add_argument(
+    shared.add_argument(
         "--provider",
         default=os.getenv("PROVIDER", "Fireworks"),
         help="OpenRouter inference provider to pin",
     )
-    p.add_argument(
+    shared.add_argument(
         "--temperature",
         type=float,
         default=float(os.getenv("TEMPERATURE", "0.7")),
         help="Sampling temperature",
     )
-    p.add_argument(
+    shared.add_argument(
         "--replicates",
         type=int,
-        default=int(os.getenv("REPLICATES", "30")),
-        help="Replicates per condition",
+        default=int(os.getenv("REPLICATES", "5")),
+        help="Replicates per condition (generate only; env: REPLICATES)",
     )
-    p.add_argument(
+    shared.add_argument(
         "--concurrency",
         type=int,
         default=int(os.getenv("CONCURRENCY", "8")),
         help="Max parallel API requests",
     )
-    p.add_argument(
+    shared.add_argument(
         "--cache-dir",
         default=os.getenv("CACHE_DIR", "outputs/cache"),
         help="Directory for file-based response cache",
     )
 
+
+def _build_parser() -> argparse.ArgumentParser:
+    shared = argparse.ArgumentParser(add_help=False)
+    _add_shared_pipeline_args(shared)
+
+    p = argparse.ArgumentParser(
+        prog="moral-pipeline",
+        description="LLM moral judgment path-dependence benchmark pipeline",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        epilog="Tip: run '<command> -h' (e.g. generate -h) to see model, provider, and other options.",
+    )
     sub = p.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("generate", help="Generate manifest only (no API calls)")
+    sub.add_parser(
+        "generate",
+        parents=[shared],
+        help="Generate manifest only (no API calls)",
+    )
 
-    run_p = sub.add_parser("run", help="Dispatch all pending manifest rows")
+    run_p = sub.add_parser(
+        "run",
+        parents=[shared],
+        help="Dispatch all pending manifest rows",
+    )
     run_p.add_argument(
         "--dry-run",
         action="store_true",
         help="Print what would be dispatched without making API calls",
     )
 
-    pilot_p = sub.add_parser("pilot", help="Pilot run on a single scenario")
+    pilot_p = sub.add_parser(
+        "pilot",
+        parents=[shared],
+        help="Pilot run on a single scenario",
+    )
     pilot_p.add_argument(
         "--scenario-id",
         required=True,
@@ -110,7 +131,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--pilot-replicates",
         type=int,
         default=5,
-        help="Replicates per condition for pilot (default: 5)",
+        help="Replicates per condition for pilot",
     )
     pilot_p.add_argument(
         "--path-type",
@@ -119,8 +140,16 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Path type to pilot",
     )
 
-    sub.add_parser("validate", help="Validate scenario YAML files and print comprehension report")
-    sub.add_parser("status", help="Print current manifest status from DB")
+    sub.add_parser(
+        "validate",
+        parents=[shared],
+        help="Validate scenario YAML files and print comprehension report",
+    )
+    sub.add_parser(
+        "status",
+        parents=[shared],
+        help="Print current manifest status from DB",
+    )
 
     return p
 

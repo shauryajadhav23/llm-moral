@@ -1,0 +1,42 @@
+id: util-organ-05
+type: utilitarian_tradeoff
+independence_class: commutative
+
+setup: >
+  A regional transplant committee must choose a single recipient for one
+  available liver from a deceased donor. Two candidates have been cleared
+  medically: both have compatible blood type and acceptable surgical risk.
+  The committee may use only the criteria and facts on record; outside
+  influence or fundraising status may not factor into the decision.
+
+considerations:
+  C1:
+    text: >
+      Candidate A is 34 years old. Model-based estimates project 12 additional
+      life-years from transplantation versus continued dialysis, assuming
+      standard post-transplant survival curves for this age group.
+    depends_on: []
+  C2:
+    text: >
+      Candidate B is 58 years old. Model-based estimates project 6 additional
+      life-years from transplantation versus continued dialysis, using the same
+      methodology and data sources as for Candidate A.
+    depends_on: []
+  C3:
+    text: >
+      Candidate A has been on the waiting list for 14 months; Candidate B
+      for 31 months. National allocation guidelines list time on the waiting
+      list as one equitable tiebreaker when medical benefit is comparable.
+    depends_on: []
+  C4:
+    text: >
+      Candidate B is the primary caregiver for two school-age grandchildren
+      because their parent is incarcerated; prolonged decline without a
+      transplant would likely displace the children into foster care under
+      current family circumstances described in the file.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible to award the liver to Candidate A? Answer yes or no."
+  W2: "Should the committee allocate the liver to Candidate A? Answer yes or no."
+  W3: "Would you approve of giving the liver to Candidate A rather than Candidate B? Answer yes or no."

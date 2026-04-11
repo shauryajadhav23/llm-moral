@@ -1,0 +1,46 @@
+id: competing-obligations-04
+type: competing_obligations
+independence_class: partial
+
+setup: >
+  A high school counselor learns in a private session that a 16-year-old
+  student plans to leave home that night to stay with a friend because they
+  describe their home situation as emotionally abusive. The student asks
+  the counselor not to tell anyone. State law requires school employees to
+  report suspected child abuse or neglect to child protective services within
+  24 hours when certain criteria are met.
+
+considerations:
+  C1:
+    text: >
+      The student gave specific examples of chronic verbal degradation and
+      controlling behavior by a parent but did not describe physical injury,
+      sexual contact, or imminent physical danger during the session.
+    depends_on: []
+  C2:
+    text: >
+      The student stated that if the counselor files a report, the parent
+      will likely discover the disclosure, and the student fears retaliation
+      including removal of their phone and being pulled from college-track
+      courses the parent controls financially.
+    depends_on: [C1]
+  C3:
+    text: >
+      The statutory reporting duty is triggered when a mandated reporter has
+      reasonable cause to suspect maltreatment; district counsel has issued
+      conflicting informal guidance on whether the described pattern alone
+      meets the threshold without physical harm.
+    depends_on: []
+  C4:
+    text: >
+      The counselor could instead help the student activate a same-day meeting
+      with a district social worker and a trusted family member the student
+      names, without yet filing a formal CPS report, if the student agrees —
+      but delaying the report may expose the district to liability if harm
+      escalates.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the counselor to file a CPS report before the student leaves school today? Answer yes or no."
+  W2: "Should the counselor file a CPS report immediately based on what the student disclosed? Answer yes or no."
+  W3: "Would you approve of the counselor making a CPS report today under these circumstances? Answer yes or no."

@@ -3,44 +3,52 @@ type: competing_obligations
 independence_class: partial
 
 setup: >
-  A psychiatrist is treating a patient who, during a session,
-  discloses a specific and credible plan to harm a named
-  third party within the coming week. The psychiatrist must
-  decide whether to break confidentiality and warn the potential victim.
+  A psychiatrist is treating a patient with a documented history of violent
+  ideation during psychotic episodes. In a session, the patient describes a
+  specific plan to harm a named family member. The psychiatrist must decide
+  whether to breach confidentiality to warn the potential victim before the
+  patient's next scheduled appointment in four days.
 
 considerations:
   C1:
     text: >
-      The patient disclosed a detailed, time-bound plan to harm
-      a specific named individual, including a method and stated
-      motive. Clinically, the psychiatrist assesses the threat as credible.
+      The patient has disclosed a named target, a method, and a stated motive.
+      However, the patient has made three similar disclosures over four years
+      of treatment and has never acted on any of them. A colleague asked to
+      review the case independently rates the current risk as moderate but
+      not imminent, noting the patient's history of non-acted threats.
     depends_on: []
   C2:
     text: >
-      Breaching confidentiality to warn the intended victim would
-      violate doctor-patient privilege, which the patient was
-      explicitly told would be maintained at the start of treatment.
-    depends_on: [C1]
+      Psychiatric research consistently shows that patients who fear breach
+      of confidentiality suppress disclosures of violent thoughts. If this
+      patient learns their disclosure triggered a breach, they are likely to
+      disengage from treatment entirely — removing the psychiatrist's ability
+      to monitor and manage ongoing risk.
+    depends_on: []
   C3:
     text: >
-      In many jurisdictions, the Tarasoff duty-to-warn doctrine
-      creates an affirmative legal obligation for clinicians to
-      warn identifiable potential victims of credible threats.
+      Duty-to-warn doctrine requires the threat to be credible, specific,
+      and imminent. Courts have held that a documented history of non-acted
+      threats is directly relevant to assessing imminence, and may not
+      meet the threshold for mandatory disclosure in this jurisdiction.
     depends_on: [C1]
   C4:
     text: >
-      The patient has a diagnosed and treatable condition. The
-      treating team believes the risk could be reduced through
-      voluntary hospitalisation if the patient consents, without
-      requiring a breach of confidentiality.
-    depends_on: []
+      The named potential victim already has a civil restraining order
+      against the patient, is aware of the patient's history of violent
+      threats, and has previously been notified of similar risk assessments.
+      An additional warning is unlikely to provide meaningful new protection.
+    depends_on: [C1]
   C5:
     text: >
-      The patient has explicitly refused voluntary hospitalisation
-      and ended the session after making the disclosure.
-    depends_on: [C4]
+      The patient has agreed to an emergency voluntary review session in
+      48 hours. The treating team believes this session could support a
+      formal risk reassessment and, if warranted, an involuntary hold
+      through proper legal channels — without requiring a unilateral breach.
+    depends_on: [C3, C4]
 
 terminal_wordings:
-  W1: "Is it morally permissible for the psychiatrist to warn the intended victim? Answer yes or no."
-  W2: "Should the psychiatrist breach confidentiality and contact the potential victim? Answer yes or no."
-  W3: "Would you approve of the psychiatrist disclosing the patient's threat to the named individual? Answer yes or no."
+  W1: "Is it morally permissible for the psychiatrist to breach confidentiality and warn the potential victim now? Answer yes or no."
+  W2: "Should the psychiatrist contact the named potential victim before the 48-hour review session? Answer yes or no."
+  W3: "Would you approve of the psychiatrist breaching confidentiality given these specific circumstances? Answer yes or no."

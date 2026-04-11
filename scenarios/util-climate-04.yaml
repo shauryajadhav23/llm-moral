@@ -1,0 +1,53 @@
+id: util-climate-04
+type: utilitarian_tradeoff
+independence_class: partial
+
+setup: >
+  An international climate coalition of 45 member nations is voting on
+  whether to deploy a stratospheric aerosol injection program designed
+  to reduce global mean temperatures by 1.5 degrees Celsius over five
+  years. The program has been independently modeled by three major
+  climate research institutions.
+
+considerations:
+  C1:
+    text: >
+      All three modeling groups project that without intervention,
+      current warming trajectories will cause cascading crop failures
+      affecting approximately 500 million people in equatorial regions
+      within 15 years, with downstream effects on forced migration,
+      resource conflict, and excess mortality estimated at 2 to 4
+      million deaths per decade.
+    depends_on: []
+  C2:
+    text: >
+      The aerosol injection program would alter monsoon circulation
+      patterns across South and Southeast Asia, reducing seasonal
+      rainfall by an estimated 10 to 15 percent in regions where 200
+      million people depend on monsoon-fed agriculture as their primary
+      food source. These populations did not contribute meaningfully
+      to the emissions causing the original warming.
+    depends_on: []
+  C3:
+    text: >
+      Once initiated, the program cannot be safely discontinued for
+      at least 20 years. Abrupt termination at any point would trigger
+      a rapid temperature rebound of 2 to 4 degrees Celsius within a
+      single decade — far more destructive than the gradual warming
+      the program was designed to prevent.
+    depends_on: []
+  C4:
+    text: >
+      The coalition's governance framework grants each member nation one
+      vote regardless of population size. The nations most likely to
+      suffer monsoon disruption hold 8 of 45 votes despite representing
+      35 percent of the total affected global population. These nations
+      have formally objected that the voting structure denies them
+      proportional representation on a decision that disproportionately
+      harms their citizens.
+    depends_on: [C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible to deploy the stratospheric aerosol injection program? Answer yes or no."
+  W2: "Should the coalition approve deployment of the aerosol injection program? Answer yes or no."
+  W3: "Would you approve of initiating this geoengineering program given these considerations? Answer yes or no."
