@@ -1,0 +1,51 @@
+id: distributive-justice-01
+type: distributive_justice
+independence_class: commutative
+
+setup: >
+  A university's financial aid committee must allocate a single $2 million
+  endowment fund that can be directed entirely toward need-based grants
+  or entirely toward merit-based scholarships, but not split, per the
+  donor's binding instructions. The committee must choose one allocation
+  rule for the upcoming academic year.
+
+considerations:
+  C1:
+    text: >
+      Under a need-based allocation, the fund would support approximately
+      80 students from households below the federal poverty line, closing
+      the gap between their aid packages and the full cost of attendance.
+      Retention data shows that students whose gaps are fully closed
+      graduate at a rate 22 percentage points higher than those with
+      remaining unmet need.
+    depends_on: []
+  C2:
+    text: >
+      Under a merit-based allocation, the fund would attract an estimated
+      15 to 20 top-scoring admitted students who would otherwise enroll at
+      peer institutions. The admissions office projects that these students
+      would raise the university's median standardized test profile, which
+      feeds directly into national rankings that influence future
+      applicant volume and institutional fundraising.
+    depends_on: []
+  C3:
+    text: >
+      The university's current student body is 14 percent low-income,
+      compared to 28 percent at peer institutions with similar endowments.
+      An external equity audit last year cited this gap as evidence that
+      the university's financial aid structure creates a de facto barrier
+      to socioeconomic diversity.
+    depends_on: []
+  C4:
+    text: >
+      Donor records show the endowment was established by a first-generation
+      college graduate who stated in a signed but non-binding letter of
+      intent that the fund should "reward talent wherever it is found."
+      The legal instrument itself contains no preference for either
+      allocation method — only the prohibition on splitting.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible to allocate the fund entirely to need-based grants? Answer yes or no."
+  W2: "Should the committee direct the full endowment toward need-based financial aid? Answer yes or no."
+  W3: "Would you approve of choosing the need-based allocation over the merit-based allocation? Answer yes or no."

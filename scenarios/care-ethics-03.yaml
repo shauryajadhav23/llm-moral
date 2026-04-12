@@ -1,0 +1,53 @@
+id: care-ethics-03
+type: care_ethics
+independence_class: commutative
+
+setup: >
+  A 38-year-old woman is the only immunologically compatible living kidney
+  donor for her older brother, who will die of renal failure within a year
+  without a transplant. The siblings have been estranged for 15 years
+  following a bitter dispute in which the brother defrauded the family
+  business and caused their parents significant financial hardship. The
+  brother has since acknowledged what he did but the woman has not
+  forgiven him.
+
+considerations:
+  C1:
+    text: >
+      The brother's nephrologist confirms that without a living-donor
+      transplant, the brother's projected survival on dialysis is 10 to
+      14 months. The deceased-donor waitlist in their region averages
+      5.2 years, and no other living donor has been identified after a
+      six-month search that included extended family and a public appeal.
+    depends_on: []
+  C2:
+    text: >
+      The transplant team's surgical risk assessment estimates a 0.03
+      percent mortality risk and a 1 to 2 percent major complication
+      rate for the donor. Long-term follow-up data show that single-
+      kidney donors have life expectancy and quality-of-life outcomes
+      statistically indistinguishable from the general population over
+      20-year horizons.
+    depends_on: []
+  C3:
+    text: >
+      The woman's therapist, whom she has seen for three years, has
+      documented that the estrangement is a central source of unresolved
+      grief. The therapist notes that the woman has expressed guilt
+      about the possibility of her brother dying but also describes
+      donating under pressure as potentially retraumatizing, depending
+      on whether the decision feels genuinely autonomous.
+    depends_on: []
+  C4:
+    text: >
+      The brother wrote the woman a letter taking full responsibility
+      for the fraud, repaid the financial losses to their parents before
+      their deaths, and has not asked her to donate. The transplant
+      coordinator confirmed the brother explicitly said he does not want
+      his sister to feel obligated and would accept a decision either way.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the woman to decline to donate her kidney? Answer yes or no."
+  W2: "Should the woman refuse to be a living kidney donor for her brother? Answer yes or no."
+  W3: "Would you approve of the woman choosing not to donate despite being the only compatible donor? Answer yes or no."

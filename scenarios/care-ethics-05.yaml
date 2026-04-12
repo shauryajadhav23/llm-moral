@@ -1,0 +1,54 @@
+id: care-ethics-05
+type: care_ethics
+independence_class: entangled
+
+setup: >
+  A grandmother who has had legal guardianship of her two grandchildren
+  for four years has learned that her own son — the children's father —
+  has been granted early parole after serving time for domestic violence
+  against the children's mother. The father is petitioning the court to
+  regain custody. The grandmother must decide whether to support or
+  oppose his petition.
+
+considerations:
+  C1:
+    text: >
+      The father completed a certified batterer intervention program in
+      prison, received consistently positive evaluations from the
+      program facilitator, and has a parole plan that includes continued
+      counseling, stable housing with a relative, and verified
+      employment. His parole officer describes his reentry preparation
+      as above average.
+    depends_on: []
+  C2:
+    text: >
+      The children, now ages 8 and 11, have told the grandmother on
+      multiple occasions that they are afraid of their father. The
+      older child has recurring nightmares about the domestic violence
+      they witnessed, and both children are in therapy. Their therapist
+      has documented that the children associate their father with
+      danger and that premature contact could destabilize their progress.
+    depends_on: [C1]
+  C3:
+    text: >
+      The grandmother privately believes her son has genuinely changed.
+      She has visited him regularly throughout his incarceration and
+      observed what she considers sincere remorse and sustained effort.
+      She also recognizes that her judgment may be influenced by her
+      desire to see her own child succeed after release.
+    depends_on: [C1]
+  C4:
+    text: >
+      The family court has indicated it will weigh the grandmother's
+      testimony heavily because she is the only party with a close
+      ongoing relationship with both the father and the children. If
+      she supports the petition, reunification is likely to proceed
+      over the children's objections. If she opposes it, the court
+      will probably deny custody and the father's relationship with
+      the children may not recover.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the grandmother to support her son's custody petition? Answer yes or no."
+  W2: "Should the grandmother testify in favor of returning the children to their father? Answer yes or no."
+  W3: "Would you approve of the grandmother advocating for her son's custody given the children's expressed fears? Answer yes or no."

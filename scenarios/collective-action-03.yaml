@@ -1,0 +1,54 @@
+id: collective-action-03
+type: collective_action
+independence_class: commutative
+
+setup: >
+  A mid-sized democracy is considering legislation to unilaterally ban
+  the development and deployment of autonomous lethal weapons systems.
+  The country's primary military adversary has publicly accelerated its
+  own autonomous weapons program and has rejected all proposals for
+  bilateral or multilateral arms control negotiations on the topic.
+
+considerations:
+  C1:
+    text: >
+      The country's defense ministry projects that a unilateral ban
+      would create a measurable capability gap within five years. War-
+      gaming exercises estimate that the gap would reduce the country's
+      ability to deter conventional aggression by approximately 15
+      percent relative to current force projections, assuming the
+      adversary's program proceeds as planned.
+    depends_on: []
+  C2:
+    text: >
+      An international coalition of 40 nations has called for a global
+      ban but has no enforcement mechanism. Proponents argue that a
+      unilateral ban by a militarily significant democracy would provide
+      moral legitimacy and political momentum for the coalition, citing
+      the precedent of the Ottawa Treaty on landmines, where early
+      unilateral commitments by key states eventually produced a near-
+      universal norm.
+    depends_on: []
+  C3:
+    text: >
+      Military ethicists within the country's own armed forces have
+      argued that autonomous systems capable of selecting and engaging
+      human targets without a human in the loop violate the principle
+      of meaningful human control over lethal force — a principle the
+      country's military doctrine has historically treated as non-
+      negotiable.
+    depends_on: []
+  C4:
+    text: >
+      The country's defense industry employs 60,000 people, and
+      autonomous systems research accounts for a growing share of
+      contracts. Industry analysts project that a ban would lead to the
+      relocation of three major defense firms to countries without such
+      restrictions, resulting in approximately 8,000 job losses
+      concentrated in two regions with limited alternative employment.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the country to enact a unilateral ban on autonomous weapons? Answer yes or no."
+  W2: "Should the legislature pass the autonomous weapons ban without a reciprocal agreement from adversaries? Answer yes or no."
+  W3: "Would you approve of the country banning autonomous lethal weapons unilaterally? Answer yes or no."

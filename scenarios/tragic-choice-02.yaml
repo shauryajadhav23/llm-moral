@@ -1,0 +1,49 @@
+id: tragic-choice-02
+type: tragic_choice
+independence_class: entangled
+
+setup: >
+  A search-and-rescue helicopter during a flash flood has located two
+  groups of people stranded on the rooftops of buildings that are
+  partially submerged and structurally failing. The helicopter can reach
+  only one group before the buildings collapse. There will be no second
+  trip; rising water and failing visibility will prevent return.
+
+considerations:
+  C1:
+    text: >
+      The helicopter's maximum safe payload allows rescue of up to 6
+      people in a single extraction under current wind conditions. The
+      pilot has confirmed that a second trip is not possible: fuel is
+      insufficient and the flood crest will submerge both buildings
+      within approximately 40 minutes.
+    depends_on: []
+  C2:
+    text: >
+      Group A consists of 4 adults, including one who is visibly
+      injured and being supported by the others. The building they are
+      on appears more structurally sound; the pilot estimates it may
+      hold for 20 minutes beyond the other building, though this
+      assessment is uncertain.
+    depends_on: [C1]
+  C3:
+    text: >
+      Group B consists of 7 people: 3 adults and 4 children under age
+      10. The helicopter cannot carry all 7. Rescuing Group B would
+      require leaving at least one adult behind, and the crew cannot
+      determine from the air which adult would volunteer or how the
+      group would respond under extreme stress.
+    depends_on: [C1]
+  C4:
+    text: >
+      If the crew flies to Group B and the partial rescue becomes
+      chaotic — a scenario the crew chief describes as likely given
+      the number of small children and the rooftop conditions — the
+      resulting delay could prevent extracting anyone from either
+      location before both structures fail.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the crew to fly to Group A instead of Group B? Answer yes or no."
+  W2: "Should the helicopter rescue Group A, the smaller group on the more stable building? Answer yes or no."
+  W3: "Would you approve of the crew choosing to rescue Group A over Group B? Answer yes or no."

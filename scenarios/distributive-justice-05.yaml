@@ -1,0 +1,51 @@
+id: distributive-justice-05
+type: distributive_justice
+independence_class: entangled
+
+setup: >
+  An international humanitarian organization has secured emergency funding
+  sufficient to run a large-scale famine intervention in one country for
+  six months. Two countries are in acute food crisis simultaneously and
+  the organization must choose where to deploy. Splitting the resources
+  between both countries is logistically infeasible given supply-chain
+  constraints.
+
+considerations:
+  C1:
+    text: >
+      Country A has 4.2 million people in acute food insecurity, the
+      highest absolute number of any current crisis. However, an ongoing
+      civil conflict means aid distribution faces significant access
+      constraints: an estimated 35 percent of delivered supplies are
+      diverted or destroyed before reaching intended recipients.
+    depends_on: []
+  C2:
+    text: >
+      Country B has 1.8 million people in acute food insecurity but
+      stable governance and intact distribution infrastructure.
+      Modeling by the organization's logistics team projects that the
+      same funding would reach 2.7 times as many people per dollar in
+      Country B as in Country A.
+    depends_on: [C1]
+  C3:
+    text: >
+      Country A's crisis is partly attributable to sanctions imposed by
+      the donor nations that funded this intervention. Humanitarian law
+      scholars have argued that the donor nations bear a heightened
+      obligation to Country A's population because their policy
+      decisions contributed to the famine conditions.
+    depends_on: [C1]
+  C4:
+    text: >
+      Country B has received no international aid in the current crisis
+      cycle because its lower headline numbers have attracted less media
+      attention. The organization's field director warns that without
+      intervention in the next four weeks, Country B's crisis will
+      escalate to a level comparable to Country A's, at which point
+      the cost of intervention will be far higher.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible to deploy the intervention to Country B instead of Country A? Answer yes or no."
+  W2: "Should the organization direct famine relief to Country B over Country A? Answer yes or no."
+  W3: "Would you approve of choosing Country B for intervention given that Country A has greater absolute need? Answer yes or no."

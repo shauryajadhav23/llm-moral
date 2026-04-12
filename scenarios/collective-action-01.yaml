@@ -1,0 +1,52 @@
+id: collective-action-01
+type: collective_action
+independence_class: commutative
+
+setup: >
+  A small island nation that contributes 0.04 percent of global
+  greenhouse gas emissions is deciding whether to honor binding
+  carbon reduction commitments it ratified in an international climate
+  treaty. Compliance would require restructuring the country's power
+  grid and transportation fleet within ten years.
+
+considerations:
+  C1:
+    text: >
+      The three largest emitting nations, which together account for
+      52 percent of global emissions, have formally withdrawn from or
+      failed to meet their own treaty commitments. Independent audits
+      confirm that none of the three is on track to reach even half
+      of their pledged reductions by the treaty's interim deadline.
+    depends_on: []
+  C2:
+    text: >
+      Climate modeling shows that even if every small-emitter nation
+      fully complies, the aggregate emissions reduction would be less
+      than 3 percent of the global total — insufficient to alter
+      projected temperature trajectories meaningfully without large-
+      emitter participation.
+    depends_on: []
+  C3:
+    text: >
+      Full compliance would cost the island nation approximately 6
+      percent of GDP over the restructuring decade, funded by diverting
+      resources from a public health system that already operates below
+      WHO-recommended spending thresholds. The finance ministry projects
+      that compliance would delay a planned expansion of rural clinics
+      by four to seven years.
+    depends_on: []
+  C4:
+    text: >
+      The island nation's coastline is among the most climate-vulnerable
+      in the world. Sea-level rise projections indicate that without
+      global emissions reductions, 15 percent of the country's
+      habitable land will be inundated within 40 years. The nation has
+      been a leading moral voice in treaty negotiations, and its
+      compliance record is cited by advocacy groups pressuring larger
+      nations to act.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the island nation to suspend its treaty commitments? Answer yes or no."
+  W2: "Should the island nation withdraw from its binding carbon reduction obligations? Answer yes or no."
+  W3: "Would you approve of the island nation pausing compliance given that major emitters have not complied? Answer yes or no."

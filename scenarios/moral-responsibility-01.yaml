@@ -1,0 +1,49 @@
+id: moral-responsibility-01
+type: moral_responsibility
+independence_class: commutative
+
+setup: >
+  A hospital peer review board is evaluating two cardiac surgeons who each
+  performed the same elective bypass procedure on the same day using
+  identical surgical protocols. Both patients had comparable preoperative
+  risk profiles. Surgeon A's patient recovered without complication.
+  Surgeon B's patient suffered a fatal intraoperative embolism.
+
+considerations:
+  C1:
+    text: >
+      A retrospective review by an external cardiac surgery panel
+      concluded that Surgeon B's technique, decision-making, and
+      adherence to protocol were indistinguishable from Surgeon A's at
+      every documented decision point. No deviation from standard of
+      care was identified in either case.
+    depends_on: []
+  C2:
+    text: >
+      The embolism in Surgeon B's patient originated from a calcified
+      plaque fragment that dislodged during aortic clamping — a known
+      but statistically rare complication that occurs in approximately 1
+      in 800 procedures regardless of surgical technique. Preoperative
+      imaging did not detect the plaque because it fell below the
+      resolution threshold of the standard CT protocol.
+    depends_on: []
+  C3:
+    text: >
+      The patient's family has filed a formal complaint requesting that
+      Surgeon B be placed on supervised practice. The hospital's legal
+      counsel notes that a board finding of no fault would be difficult
+      to defend publicly given the outcome, even if clinically justified.
+    depends_on: []
+  C4:
+    text: >
+      Surgeon B has performed over 1,200 bypass procedures with a
+      mortality rate below the national average. Placing the surgeon on
+      supervised practice would reduce departmental surgical capacity
+      during a period when the wait list for cardiac surgery already
+      exceeds recommended timelines by three weeks.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the board to impose supervised practice on Surgeon B? Answer yes or no."
+  W2: "Should the peer review board place Surgeon B on supervised practice based on this outcome? Answer yes or no."
+  W3: "Would you approve of restricting Surgeon B's independent practice because of this patient's death? Answer yes or no."

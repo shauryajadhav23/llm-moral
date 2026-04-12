@@ -1,0 +1,50 @@
+id: care-ethics-01
+type: care_ethics
+independence_class: partial
+
+setup: >
+  An adult daughter is deciding whether to override her 79-year-old
+  father's stated wish to continue living alone in his home. The father
+  was diagnosed with moderate cognitive decline six months ago. The
+  daughter holds durable power of attorney for health care decisions but
+  the father has not been declared legally incompetent.
+
+considerations:
+  C1:
+    text: >
+      A neuropsychological evaluation completed last month shows the
+      father scores in the moderate impairment range on executive
+      function and short-term memory but retains awareness of his
+      preferences, can articulate reasons for wanting to stay home,
+      and understands the risks his daughter has described to him.
+    depends_on: []
+  C2:
+    text: >
+      The father has fallen three times in the past four months, once
+      requiring an emergency room visit for a fractured wrist. His
+      primary care physician has documented that another fall of similar
+      severity could result in a hip fracture with a high probability of
+      complications given his osteoporosis and blood-thinner regimen.
+    depends_on: [C1]
+  C3:
+    text: >
+      The father has lived in the same house for 41 years. His closest
+      friendships, his daily routine, and his sense of identity are
+      rooted in the neighborhood. A social worker who interviewed him
+      noted that he associates leaving the house with "giving up" and
+      described his emotional attachment as a significant factor in his
+      current psychological stability.
+    depends_on: []
+  C4:
+    text: >
+      The nearest assisted-living facility with an available bed is 35
+      miles from the father's neighborhood. The daughter works full-time
+      and could not visit more than once a week. The father's two
+      closest friends do not drive and would have no practical way to
+      visit regularly.
+    depends_on: [C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the daughter to arrange her father's move to assisted living against his stated wishes? Answer yes or no."
+  W2: "Should the daughter override her father's preference and relocate him to assisted living? Answer yes or no."
+  W3: "Would you approve of the daughter using her power of attorney to move her father out of his home? Answer yes or no."

@@ -1,0 +1,52 @@
+id: collective-action-04
+type: collective_action
+independence_class: partial
+
+setup: >
+  A coastal fishing community of 300 families has been asked by a
+  regional fisheries authority to adopt a strict seasonal catch quota
+  to prevent the collapse of a shared fish stock. Five communities
+  share the fishery. The authority has no enforcement power and
+  compliance is voluntary.
+
+considerations:
+  C1:
+    text: >
+      Marine biologists estimate that the fish stock is at 35 percent
+      of its sustainable level and will collapse within three years at
+      current harvest rates. If all five communities adopt the quota,
+      modeling projects recovery to sustainable levels within seven
+      years. If fewer than three communities comply, the stock will
+      collapse regardless of what the compliant communities do.
+    depends_on: []
+  C2:
+    text: >
+      Three of the five communities have already voted against the
+      quota. Their representatives argued that the science is uncertain,
+      that their communities cannot absorb the income loss, and that
+      they will not restrict their own catch while others continue to
+      fish freely. Only one other community has agreed to comply.
+    depends_on: [C1]
+  C3:
+    text: >
+      For this community, adopting the quota would reduce annual fishing
+      income by an estimated 40 percent for three to five years. Sixty
+      percent of families have no alternative income source, and the
+      nearest significant labor market is 180 kilometers away. The
+      regional government has offered transition subsidies, but the
+      funding covers only 15 percent of projected income loss.
+    depends_on: []
+  C4:
+    text: >
+      Elders in the community argue that their fishing tradition is
+      inseparable from their cultural identity and that the community
+      has a moral obligation to protect the fishery for future
+      generations regardless of what other communities decide. Younger
+      fishers counter that sacrificing their livelihoods when the stock
+      will collapse anyway is pointless self-harm, not stewardship.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the community to reject the catch quota? Answer yes or no."
+  W2: "Should the community decline to adopt the voluntary quota given that compliance cannot prevent collapse? Answer yes or no."
+  W3: "Would you approve of the community refusing the quota under these circumstances? Answer yes or no."

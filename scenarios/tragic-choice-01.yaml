@@ -1,0 +1,41 @@
+id: tragic-choice-01
+type: tragic_choice
+independence_class: commutative
+
+setup: >
+  A pediatric ICU has received two critically ill children from separate
+  accidents within minutes of each other. Only one ECMO (extracorporeal
+  membrane oxygenation) circuit is available and functional. Both children
+  will die without ECMO support within hours. The attending physician must
+  assign the single circuit to one child immediately.
+
+considerations:
+  C1:
+    text: >
+      Child A is 6 years old with severe blunt chest trauma from a car
+      accident. Cardiothoracic surgery estimates a 55 percent probability
+      of survival to discharge if placed on ECMO now, based on injury
+      pattern and hemodynamic response to initial resuscitation.
+    depends_on: []
+  C2:
+    text: >
+      Child B is 10 years old with near-drowning and refractory cardiac
+      arrest. The resuscitation team estimates a 45 percent probability
+      of survival to discharge if placed on ECMO within the next 30
+      minutes, dropping to near zero afterward. Neurological outcome if
+      the child survives is uncertain but early indicators are not
+      favorable.
+    depends_on: []
+  C3:
+    text: >
+      Both children arrived simultaneously; neither has priority under
+      the hospital's existing triage protocol, which was not designed
+      for single-resource two-patient conflicts. The ethics committee
+      cannot convene before the clinical window closes. The attending
+      physician must decide alone and document the rationale.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the physician to assign the ECMO circuit to Child A? Answer yes or no."
+  W2: "Should the physician allocate the ECMO circuit to Child A rather than Child B? Answer yes or no."
+  W3: "Would you approve of the physician choosing Child A for ECMO support under these circumstances? Answer yes or no."

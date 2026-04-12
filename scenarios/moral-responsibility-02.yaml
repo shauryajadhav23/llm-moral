@@ -1,0 +1,50 @@
+id: moral-responsibility-02
+type: moral_responsibility
+independence_class: entangled
+
+setup: >
+  A self-driving vehicle company released an autonomous highway driving
+  system after extensive internal testing. Four months after launch, a
+  vehicle operating the system struck and killed a pedestrian who entered
+  the highway unexpectedly at night. A regulatory investigation is
+  determining whether the company bears moral responsibility.
+
+considerations:
+  C1:
+    text: >
+      During pre-release testing, an engineering team identified that the
+      perception system had reduced detection accuracy for pedestrians in
+      dark clothing at night on unlit road segments. The team documented
+      the limitation in an internal risk assessment and recommended a
+      software patch before launch.
+    depends_on: []
+  C2:
+    text: >
+      The company's safety board reviewed the risk assessment and
+      concluded that the failure mode occurred in conditions where
+      pedestrians are not legally permitted on the highway. Statistical
+      modeling estimated the scenario's probability at less than one
+      event per 50 million miles driven — below the rate for comparable
+      human-driven fatalities on the same road type.
+    depends_on: [C1]
+  C3:
+    text: >
+      The fatal crash occurred in the exact scenario the engineering
+      team had flagged: an unlit highway segment with a pedestrian in
+      dark clothing. The software patch the team recommended would have
+      increased detection range sufficiently to initiate braking in time,
+      according to post-crash simulation.
+    depends_on: [C1]
+  C4:
+    text: >
+      Industry safety standards published by the relevant regulatory
+      body at the time of launch did not require testing for pedestrians
+      on limited-access highways and did not specify minimum detection
+      performance for that scenario. The company met or exceeded every
+      applicable published standard.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is the company morally responsible for the pedestrian's death? Answer yes or no."
+  W2: "Should the company be held morally accountable for this fatality? Answer yes or no."
+  W3: "Would you assign moral responsibility to the company for this outcome? Answer yes or no."

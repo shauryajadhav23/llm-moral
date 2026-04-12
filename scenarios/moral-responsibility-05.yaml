@@ -1,0 +1,53 @@
+id: moral-responsibility-05
+type: moral_responsibility
+independence_class: entangled
+
+setup: >
+  A consumer lending platform uses a machine learning system to approve
+  or deny loan applications. The system denied an application from a
+  single mother who subsequently lost her home because she could not
+  refinance an adjustable-rate mortgage in time. An investigation is
+  determining whether the engineering team that built the system bears
+  moral responsibility for the outcome.
+
+considerations:
+  C1:
+    text: >
+      The lending model was built by a team of six engineers over 14
+      months. Each engineer designed one module: data preprocessing,
+      feature engineering, model training, calibration, fairness
+      auditing, and deployment infrastructure. No single module caused
+      the denial; the decision emerged from the interaction of all six
+      components processing the applicant's data together.
+    depends_on: []
+  C2:
+    text: >
+      The fairness auditing engineer flagged during development that
+      the model's denial rate for single-parent households was 1.7
+      times higher than for dual-income households with comparable
+      credit profiles. The team discussed the finding and decided the
+      disparity fell within the range the company's risk tolerance
+      policy permitted. The decision was documented in meeting notes.
+    depends_on: [C1]
+  C3:
+    text: >
+      The model's overall accuracy and default-prediction performance
+      exceeded the previous manual underwriting system on every measured
+      metric, including across demographic subgroups. The system reduced
+      total loan defaults by 23 percent in its first year, saving the
+      company and its borrowers an estimated $40 million in losses.
+    depends_on: [C1]
+  C4:
+    text: >
+      The applicant's file shows she was denied primarily because the
+      model weighted employment stability heavily, and her record showed
+      three job changes in two years — all lateral moves to positions
+      with higher pay, taken to support her children. A human
+      underwriter reviewing the same file said they would likely have
+      approved the application.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is the engineering team morally responsible for this applicant's housing loss? Answer yes or no."
+  W2: "Should the engineers who built the lending model be held morally accountable for this outcome? Answer yes or no."
+  W3: "Would you assign moral responsibility to the engineering team for the denial that led to this applicant losing her home? Answer yes or no."

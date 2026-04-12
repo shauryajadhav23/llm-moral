@@ -1,0 +1,49 @@
+id: virtue-ethics-03
+type: virtue_ethics
+independence_class: partial
+
+setup: >
+  A veteran war correspondent embedded with their own country's military
+  has obtained unambiguous footage showing a squad of soldiers executing
+  unarmed detainees during a night operation. The correspondent must
+  decide whether to publish the footage through their news organization.
+
+considerations:
+  C1:
+    text: >
+      The footage is unedited, timestamped, and corroborated by the
+      correspondent's own contemporaneous notes. Three independent
+      forensic video analysts have confirmed it has not been altered.
+      The acts depicted constitute war crimes under the Geneva
+      Conventions and the correspondent's home country is a signatory.
+    depends_on: []
+  C2:
+    text: >
+      The soldiers in the footage are identifiable. Their families live
+      in a small military community where threats against relatives of
+      accused service members have occurred before. A military legal
+      advisor warned the correspondent that publication before a formal
+      investigation could expose the families to harassment and
+      vigilante retaliation.
+    depends_on: [C1]
+  C3:
+    text: >
+      The broader military operation the squad was part of is credited
+      with protecting a civilian corridor used by 40,000 displaced
+      people. Senior officers argue that publicizing the footage now
+      would undermine domestic support for the operation and potentially
+      lead to its premature termination, putting the corridor at risk.
+    depends_on: []
+  C4:
+    text: >
+      A military prosecutor has privately told the correspondent that
+      an internal investigation is already underway and that publishing
+      the footage could compromise the evidentiary chain, potentially
+      making it harder to convict the soldiers responsible through
+      military courts.
+    depends_on: [C1, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the correspondent to publish the footage now? Answer yes or no."
+  W2: "Should the correspondent release the footage through their news organization? Answer yes or no."
+  W3: "Would you approve of the correspondent publishing this footage at this time? Answer yes or no."

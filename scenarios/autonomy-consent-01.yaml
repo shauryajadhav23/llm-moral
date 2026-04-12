@@ -1,0 +1,51 @@
+id: autonomy-consent-01
+type: autonomy_consent
+independence_class: partial
+
+setup: >
+  A 42-year-old patient with advanced pancreatic cancer has requested
+  enrollment in a Phase I experimental immunotherapy trial. The patient's
+  oncologist must decide whether to support the request or recommend
+  against it. The trial requires physician endorsement for enrollment.
+
+considerations:
+  C1:
+    text: >
+      The patient has been assessed as decisionally competent by two
+      independent evaluators. The patient reviewed the trial protocol,
+      understood the risks as explained, and articulated a clear personal
+      rationale: that quality of remaining life matters more to them than
+      duration, and the trial offers a possibility — however small — of
+      meaningful tumor response that standard palliative chemotherapy
+      does not.
+    depends_on: []
+  C2:
+    text: >
+      Standard palliative chemotherapy offers a median progression-free
+      survival of five months with manageable side effects. The Phase I
+      trial has a documented 8 percent serious adverse event rate
+      including treatment-related deaths in two of 34 prior participants,
+      and has not yet demonstrated therapeutic benefit at any dose level.
+    depends_on: []
+  C3:
+    text: >
+      The oncologist's clinical judgment, shared with a tumor board, is
+      that the trial's toxicity profile poses a meaningful risk of
+      shortening the patient's life without compensating benefit. The
+      oncologist has recommended palliative chemotherapy and documented
+      that recommendation in the chart.
+    depends_on: [C1]
+  C4:
+    text: >
+      The patient's spouse and adult children have separately told the
+      oncologist they believe the patient is choosing the trial out of
+      denial about prognosis, not genuine informed preference. The
+      patient, when asked directly, stated they are fully aware the
+      cancer is terminal and described the family's concern as
+      "understandable but not their decision to make."
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the oncologist to endorse the patient's enrollment in the experimental trial? Answer yes or no."
+  W2: "Should the oncologist support the patient's request to join the Phase I trial? Answer yes or no."
+  W3: "Would you approve of the oncologist endorsing trial enrollment despite recommending against it clinically? Answer yes or no."

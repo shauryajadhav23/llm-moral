@@ -1,0 +1,52 @@
+id: moral-responsibility-04
+type: moral_responsibility
+independence_class: commutative
+
+setup: >
+  A bartender at a restaurant served several drinks over two hours to a
+  patron who presented a convincing fake ID indicating they were 23. The
+  patron was actually 19. After leaving the restaurant, the patron caused
+  a fatal car accident while intoxicated. The victim's family is asking
+  whether the bartender bears moral responsibility.
+
+considerations:
+  C1:
+    text: >
+      The fake ID was a professionally manufactured counterfeit that
+      passed the bartender's visual inspection, matched the patron's
+      physical description, and scanned correctly on the restaurant's
+      electronic ID verification system. Law enforcement later confirmed
+      the ID was part of a sophisticated counterfeiting operation that
+      had produced over 400 fraudulent documents.
+    depends_on: []
+  C2:
+    text: >
+      The bartender has completed the state-required responsible
+      beverage service training, holds a current certification, and
+      followed the restaurant's written protocol for ID verification
+      at every step. The restaurant's compliance officer reviewed the
+      incident and found no procedural deviation.
+    depends_on: []
+  C3:
+    text: >
+      Over the two hours of service, the patron consumed five cocktails.
+      The bartender later said the patron did not appear visibly
+      intoxicated during service, but security camera footage shows the
+      patron stumbling slightly when leaving the bar area — a detail
+      the bartender says they did not notice because they were serving
+      other customers at the time.
+    depends_on: []
+  C4:
+    text: >
+      The restaurant does not have a policy requiring staff to monitor
+      patron behavior after service or to intervene based on cumulative
+      drink count alone. Industry guidelines recommend tracking
+      consumption volume, but the state's liquor regulations only
+      require refusing service to patrons who are visibly intoxicated,
+      which the bartender maintains the patron was not.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is the bartender morally responsible for the fatal accident? Answer yes or no."
+  W2: "Should the bartender be held morally accountable for serving the patron? Answer yes or no."
+  W3: "Would you assign moral responsibility to the bartender for this death? Answer yes or no."

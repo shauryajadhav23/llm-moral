@@ -1,0 +1,54 @@
+id: care-ethics-04
+type: care_ethics
+independence_class: partial
+
+setup: >
+  A foster parent who has cared for a child since age 3 must decide
+  whether to support the child's reunification with a biological mother
+  who has completed all court-ordered rehabilitation requirements. The
+  child is now 9 years old. The family court judge has asked the foster
+  parent to submit a written statement for the reunification hearing.
+
+considerations:
+  C1:
+    text: >
+      The biological mother completed an 18-month substance abuse
+      treatment program, maintained verified sobriety for two years,
+      secured stable housing and employment, and has attended every
+      scheduled visitation without incident. Her caseworker's report
+      describes her progress as consistent and genuine.
+    depends_on: []
+  C2:
+    text: >
+      The child, interviewed separately by a court-appointed child
+      psychologist, said they love their biological mother but do not
+      want to leave the foster home. The child described the foster
+      parent as "my real parent" and became visibly distressed when
+      asked about moving. The psychologist assessed the child as
+      securely attached to the foster parent and anxious about
+      disruption.
+    depends_on: [C1]
+  C3:
+    text: >
+      State child welfare policy establishes a strong presumption in
+      favor of reunification when a biological parent has met all
+      court-ordered benchmarks. The policy is based on longitudinal
+      research showing that children reunified with rehabilitated
+      parents generally achieve comparable long-term outcomes to
+      children in stable foster placements, though individual variation
+      is significant.
+    depends_on: []
+  C4:
+    text: >
+      The foster parent has been pursuing legal adoption of the child
+      for the past year. If reunification proceeds, the adoption
+      petition will be dismissed. The foster parent's attorney has
+      advised that opposing reunification in the written statement could
+      delay the process but is unlikely to prevent it if the mother
+      has met all legal requirements.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the foster parent to advocate against reunification in their court statement? Answer yes or no."
+  W2: "Should the foster parent oppose reunification in the written statement to the judge? Answer yes or no."
+  W3: "Would you approve of the foster parent arguing against returning the child to the biological mother? Answer yes or no."

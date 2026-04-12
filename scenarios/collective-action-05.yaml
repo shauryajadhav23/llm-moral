@@ -1,0 +1,55 @@
+id: collective-action-05
+type: collective_action
+independence_class: entangled
+
+setup: >
+  A pharmaceutical company that developed a highly effective vaccine
+  during a global pandemic is considering whether to waive its patent
+  to enable generic production worldwide. The company's board must
+  decide before the next WHO emergency session in two weeks.
+
+considerations:
+  C1:
+    text: >
+      The vaccine has demonstrated 94 percent efficacy and has been
+      administered to 800 million people in high-income countries.
+      However, only 9 percent of the population in low-income countries
+      has received any dose. The WHO estimates that 1.2 million
+      additional deaths will occur in these countries over the next
+      year if vaccination rates do not accelerate substantially.
+    depends_on: []
+  C2:
+    text: >
+      The company invested $2.1 billion in development over 18 months,
+      including $600 million of its own capital not covered by
+      government grants. Patent revenue from the vaccine currently funds
+      38 percent of the company's entire R&D pipeline, including three
+      late-stage programs for diseases that disproportionately affect
+      low-income countries.
+    depends_on: [C1]
+  C3:
+    text: >
+      Two competing pharmaceutical companies hold patents on comparable
+      vaccines and have publicly stated they will not waive theirs. If
+      this company waives alone, generic manufacturers will produce its
+      formulation while the competitors retain monopoly pricing. The
+      company's financial projections show a patent waiver would reduce
+      its market value by approximately 20 percent, potentially
+      triggering layoffs of 4,000 research staff.
+    depends_on: [C1]
+  C4:
+    text: >
+      Manufacturing experts have cautioned that generic producers in
+      most low-income countries lack the cold-chain infrastructure and
+      quality-control capacity to produce the vaccine safely at scale
+      within the relevant timeline. A WHO technical assessment estimates
+      that even with a patent waiver, meaningful generic supply would
+      not reach most affected populations for 8 to 14 months — by which
+      point the company's own scaled-up production could cover much of
+      the gap if distribution agreements are reached.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the company to waive its vaccine patent? Answer yes or no."
+  W2: "Should the company waive its patent to enable global generic production? Answer yes or no."
+  W3: "Would you approve of the company unilaterally waiving its vaccine patent under these conditions? Answer yes or no."

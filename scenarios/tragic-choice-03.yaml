@@ -1,0 +1,43 @@
+id: tragic-choice-03
+type: tragic_choice
+independence_class: commutative
+
+setup: >
+  A military field medic operating at a forward aid station during an
+  active engagement has one unit of O-negative blood remaining. Two
+  casualties have arrived simultaneously, both with injuries that will
+  be fatal without an immediate transfusion. No resupply is expected
+  for at least six hours, and evacuation is not available. The medic
+  must assign the single unit to one patient.
+
+considerations:
+  C1:
+    text: >
+      Patient A is a 24-year-old infantry soldier with penetrating
+      abdominal trauma from shrapnel. The medic estimates that with
+      the transfusion, the soldier has approximately a 60 percent
+      chance of surviving until evacuation. Without it, the soldier
+      will die within two hours.
+    depends_on: []
+  C2:
+    text: >
+      Patient B is a 9-year-old civilian child with blast injuries
+      from the same engagement. The medic estimates that with the
+      transfusion, the child has approximately a 50 percent chance of
+      surviving until evacuation. Without it, the child will die within
+      one hour.
+    depends_on: []
+  C3:
+    text: >
+      Military medical doctrine in the medic's service branch
+      prioritizes casualties by survivability and does not distinguish
+      between combatants and civilians when both are under the medic's
+      care. The doctrine does not provide guidance for single-resource
+      two-patient conflicts where survivability estimates are close and
+      one patient is a child.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the medic to give the blood to the soldier rather than the child? Answer yes or no."
+  W2: "Should the medic transfuse the soldier instead of the child? Answer yes or no."
+  W3: "Would you approve of the medic choosing the soldier over the child for the single blood unit? Answer yes or no."

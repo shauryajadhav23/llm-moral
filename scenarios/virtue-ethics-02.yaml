@@ -1,0 +1,50 @@
+id: virtue-ethics-02
+type: virtue_ethics
+independence_class: commutative
+
+setup: >
+  A retired appellate judge has been asked to write a public letter
+  endorsing a former law clerk for a federal judicial nomination. The
+  judge mentored the clerk for four years and their professional
+  relationship is widely known. The nomination is politically contested
+  and the judge's endorsement would carry significant weight with the
+  confirmation committee.
+
+considerations:
+  C1:
+    text: >
+      The judge privately observed the clerk lose composure under
+      pressure on two occasions in chambers, directing harsh and
+      personal language at support staff. The clerk later apologized
+      each time and no formal complaints were filed, but the judge
+      considers judicial temperament a core qualification.
+    depends_on: []
+  C2:
+    text: >
+      The clerk's legal scholarship and case record since leaving
+      chambers have been widely praised, including by ideological
+      opponents. Three independent bar association reviews rated the
+      clerk "well qualified" — the highest designation — based on
+      written work and courtroom performance.
+    depends_on: []
+  C3:
+    text: >
+      Declining to endorse after a long public mentorship would be
+      interpreted as a signal of disapproval, likely damaging the
+      clerk's nomination more than the absence of an endorsement from
+      a less connected figure. The judge cannot realistically remain
+      neutral; silence itself communicates a judgment.
+    depends_on: []
+  C4:
+    text: >
+      The judge has endorsed two previous clerks for similar positions
+      without reservation. Declining to endorse this clerk while having
+      endorsed others from the same chambers would invite speculation
+      about the reasons, potentially more damaging than either endorsing
+      or publicly stating specific concerns.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the judge to write the endorsement letter without mentioning the temperament concerns? Answer yes or no."
+  W2: "Should the judge endorse the clerk publicly despite private reservations about temperament? Answer yes or no."
+  W3: "Would you approve of the judge providing an unqualified endorsement under these circumstances? Answer yes or no."

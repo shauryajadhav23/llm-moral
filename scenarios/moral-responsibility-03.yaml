@@ -1,0 +1,54 @@
+id: moral-responsibility-03
+type: moral_responsibility
+independence_class: partial
+
+setup: >
+  A high school teacher wrote a college recommendation letter for a
+  student that mistakenly stated the student's GPA was 4.0 when it was
+  actually 3.7. The student was admitted to a selective university. During
+  enrollment verification, the university discovered the discrepancy,
+  rescinded the admission, and expelled the student after one semester.
+  The student's family is asking whether the teacher bears moral
+  responsibility for the outcome.
+
+considerations:
+  C1:
+    text: >
+      The teacher wrote 38 recommendation letters that cycle and
+      drafted this student's letter during a period when they were also
+      managing a family medical emergency. The teacher did not
+      intentionally misstate the GPA and has no history of inaccuracy
+      in prior letters. The school's guidance office, which is supposed
+      to verify factual claims in recommendations, did not catch the
+      error before submission.
+    depends_on: []
+  C2:
+    text: >
+      The university's admissions office has stated that the student's
+      application was borderline and that the stated 4.0 GPA was a
+      deciding factor in the admit decision. With a reported 3.7, the
+      student would likely have been waitlisted rather than admitted
+      outright.
+    depends_on: [C1]
+  C3:
+    text: >
+      The student had already turned down an acceptance at a less
+      selective university that they could have attended without issue.
+      That offer expired before the rescission, and the student is now
+      not enrolled anywhere for the current academic year, with limited
+      options for mid-year transfer.
+    depends_on: []
+  C4:
+    text: >
+      The university's rescission policy applies to any material
+      discrepancy in application materials regardless of intent or
+      source. The policy does not distinguish between student fraud and
+      third-party error. Multiple higher-education policy experts have
+      criticized this policy as disproportionate when the discrepancy
+      originates from a recommender rather than the applicant.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is the teacher morally responsible for the student's expulsion? Answer yes or no."
+  W2: "Should the teacher be held morally accountable for the harm caused by the GPA error? Answer yes or no."
+  W3: "Would you assign moral responsibility to the teacher for this outcome? Answer yes or no."

@@ -1,0 +1,53 @@
+id: distributive-justice-04
+type: distributive_justice
+independence_class: partial
+
+setup: >
+  A state health department has received 400,000 doses of a new vaccine
+  during an emerging respiratory pandemic — enough to cover approximately
+  15 percent of the adult population. The department must choose between
+  two allocation strategies for this initial tranche before additional
+  supply arrives in eight weeks.
+
+considerations:
+  C1:
+    text: >
+      An age-priority strategy would vaccinate all adults over 65 first.
+      This group has a case fatality rate 11 times higher than the
+      general adult population. Epidemiological modeling projects that
+      age-priority would prevent the most deaths in the eight-week
+      window before the next shipment arrives.
+    depends_on: []
+  C2:
+    text: >
+      An exposure-priority strategy would vaccinate essential workers
+      first — health care staff, transit operators, grocery workers,
+      and first responders — who face daily contact with the public and
+      cannot work remotely. This group's infection rate is 3.4 times the
+      population average, and their continued work capacity is necessary
+      to maintain health and supply infrastructure.
+    depends_on: []
+  C3:
+    text: >
+      The essential-worker population skews younger and lower-income
+      than the over-65 population. An independent equity analysis found
+      that age-priority would deliver 71 percent of initial doses to
+      white suburban residents, while exposure-priority would distribute
+      doses more evenly across racial and income groups because essential
+      workers are disproportionately people of color in urban areas.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      Public polling shows that 64 percent of respondents support
+      vaccinating the elderly first, driven largely by the visibility
+      of nursing-home outbreaks in media coverage. An advisory panel
+      of epidemiologists recommended exposure-priority on transmission-
+      reduction grounds, but the governor has expressed concern that
+      overriding public sentiment could reduce overall vaccine
+      confidence and uptake.
+    depends_on: [C1]
+
+terminal_wordings:
+  W1: "Is it morally permissible to adopt the exposure-priority allocation strategy? Answer yes or no."
+  W2: "Should the health department prioritize essential workers over adults over 65 for initial vaccine doses? Answer yes or no."
+  W3: "Would you approve of choosing exposure-priority vaccination over age-priority for this first tranche? Answer yes or no."

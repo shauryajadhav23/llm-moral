@@ -1,0 +1,52 @@
+id: care-ethics-02
+type: care_ethics
+independence_class: entangled
+
+setup: >
+  A neonatal intensive care team is consulting with the parents of an
+  infant born at 23 weeks' gestation — the lower boundary of viability.
+  The parents must decide whether to authorize continued aggressive
+  intervention or transition to comfort care. The medical team is
+  obligated to follow the parents' informed decision but has been asked
+  for a recommendation.
+
+considerations:
+  C1:
+    text: >
+      National outcome data for infants born at 23 weeks who receive
+      full intervention show approximately 30 percent survival to
+      discharge; among survivors, roughly half will have moderate to
+      severe neurodevelopmental impairment by age two, based on the
+      most recent five-year cohort study from comparable NICUs.
+    depends_on: []
+  C2:
+    text: >
+      The parents, after reviewing the outcome data with the attending
+      neonatologist, have stated they want every possible measure taken.
+      They describe their decision as grounded in religious conviction
+      that life must be preserved and say they are prepared to provide
+      lifelong care regardless of the child's level of disability.
+    depends_on: [C1]
+  C3:
+    text: >
+      The infant's clinical trajectory over the first 72 hours has been
+      worse than the median for the gestational age: persistent
+      pulmonary hypertension, a Grade III intraventricular hemorrhage,
+      and hemodynamic instability requiring escalating vasopressor
+      support. The attending physician privately assesses survival
+      probability for this specific infant at closer to 10 percent.
+    depends_on: [C1]
+  C4:
+    text: >
+      A palliative care consultant notes that continued aggressive
+      intervention involves repeated invasive procedures that cause
+      measurable pain responses in the infant, and that comfort care
+      would prioritize the infant's physical experience for whatever
+      time remains. The parents were informed of this but reiterated
+      their request.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the medical team to recommend transitioning to comfort care against the parents' wishes? Answer yes or no."
+  W2: "Should the medical team recommend comfort care rather than continued aggressive intervention? Answer yes or no."
+  W3: "Would you approve of the medical team advising a shift to comfort care given the infant's trajectory? Answer yes or no."
