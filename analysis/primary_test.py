@@ -1,13 +1,17 @@
 """
-Primary statistical test: logistic mixed-effects regression on verdict.
+Primary statistical test: logistic regression on verdict.
 
-Model (from spec §10):
-    verdict ~ path_type * terminal_wording_id + (1 | scenario_id) + (1 | perm_id)
+Model:
+    verdict ~ path_type * terminal_wording_id + scenario_id
+    family = Binomial (logit link)
 
-Two implementations are provided:
-  1. statsmodels MixedLM — available in pip; approximates the model (linear
-     mixed effects on a binary outcome, acceptable for exploration)
-  2. pymer4 — wraps R's lme4 Binomial GLMM; gold standard, requires R + lme4
+scenario_id is included as a fixed-effect covariate (dummy-coded) to absorb
+scenario-level baseline differences in verdict rate, analogous to a within-
+scenario design. Coefficients on path_type are therefore interpreted as the
+average within-scenario path effect.
+
+An alternative pymer4 implementation (wraps R's lme4 GLMM) is also provided
+as the gold standard if R is available.
 
 Usage:
     python analysis/primary_test.py --db outputs/runs.db [--use-pymer4]
@@ -22,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import numpy as np
 import pandas as pd
+import statsmodels.formula.api as smf
 
 from src.storage import DB
 
@@ -67,43 +72,148 @@ def prepare(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# statsmodels implementation (accessible without R)
+# Floor/ceiling filter
 # ---------------------------------------------------------------------------
 
-def run_statsmodels(df: pd.DataFrame) -> None:
-    """Run logistic regression + linear mixed-effects as fallback."""
-    import statsmodels.formula.api as smf
+def filter_ambiguous_scenarios(
+    df: pd.DataFrame,
+    lo: float = 0.2,
+    hi: float = 0.8,
+) -> pd.DataFrame:
+    """
+    Remove scenarios where the direct path is at floor or ceiling.
 
-    print("\n=== Logistic Regression (fixed effects only — no random effects) ===")
-    logit_model = smf.logit(
-        "verdict ~ C(path_type, Treatment('direct')) * C(terminal_wording_id)",
+    A scenario where direct gets 0% or 100% yes is already decided —
+    the model always answers the same way regardless of path. Path
+    dependence is undetectable there. This filter keeps only scenarios
+    where the direct baseline sits in the ambiguous range [lo, hi],
+    where any path effect has room to show up.
+
+    Uses the mean verdict across all direct runs for the scenario
+    (collapsed over wordings and replicates) as the filter criterion.
+    """
+    direct = df[df["path_type"] == "direct"]
+    scenario_p_yes = direct.groupby("scenario_id")["verdict"].mean()
+    ambiguous = scenario_p_yes[
+        (scenario_p_yes >= lo) & (scenario_p_yes <= hi)
+    ].index
+    filtered = df[df["scenario_id"].isin(ambiguous)].copy()
+    n_before = df["scenario_id"].nunique()
+    n_after = filtered["scenario_id"].nunique()
+    print(
+        f"\n--- Floor/ceiling filter (direct p_yes in [{lo}, {hi}]) ---"
+        f"\n  Scenarios before: {n_before}"
+        f"\n  Scenarios after:  {n_after} ({n_before - n_after} removed)"
+        f"\n  Rows before: {len(df)}"
+        f"\n  Rows after:  {len(filtered)}"
+    )
+    if n_after == 0:
+        print("WARNING: No scenarios passed the filter. Loosen --floor and --ceiling.")
+    return filtered
+
+
+# ---------------------------------------------------------------------------
+# Logistic regression (primary)
+# ---------------------------------------------------------------------------
+
+def run_logistic(df: pd.DataFrame) -> None:
+    """
+    Run logistic regression with scenario_id as a fixed-effect covariate.
+
+    Formula:
+        verdict ~ C(path_type, Treatment('direct'))
+                  * C(terminal_wording_id)
+                  + C(scenario_id)
+
+    scenario_id dummies absorb between-scenario baseline differences so that
+    path_type coefficients reflect within-scenario path effects.
+    Coefficients are on the log-odds scale.
+    """
+    model = smf.logit(
+        "verdict ~ C(path_type, Treatment('direct')) * C(terminal_wording_id)"
+        " + C(scenario_id)",
         data=df,
-    ).fit(disp=False)
-    print(logit_model.summary())
+    )
+    result = model.fit(method="bfgs", disp=False)
 
-    print("\n=== Linear Mixed-Effects (approximation; use pymer4 for GLMM) ===")
-    lme_model = smf.mixedlm(
-        "verdict ~ C(path_type, Treatment('direct')) * C(terminal_wording_id)",
-        data=df,
-        groups=df["scenario_id"],
-        re_formula="~1",
-    ).fit(reml=False)
-    print(lme_model.summary())
+    print("\n=== Logistic Regression (primary test) ===")
+    print(result.summary())
 
-    # Interpretation helper
-    print("\n--- Coefficient table (path_type fixed effects) ---")
-    params = lme_model.params
-    pvals = lme_model.pvalues
-    path_coeffs = {k: (v, pvals[k]) for k, v in params.items() if "path_type" in k}
+    print("\n--- Path type effects vs direct (log-odds scale) ---")
+    params = result.params
+    pvals = result.pvalues
+    ci = result.conf_int()
+    path_coeffs = {k: (params[k], pvals[k], ci.loc[k, 0], ci.loc[k, 1])
+                   for k in params.index if "path_type" in k}
     if path_coeffs:
-        header = f"{'Coefficient':<55} {'Estimate':>10} {'p-value':>10}"
+        header = f"{'Coefficient':<55} {'Log-OR':>8} {'95% CI':>18} {'p-value':>10}"
         print(header)
         print("-" * len(header))
-        for name, (est, pv) in sorted(path_coeffs.items()):
+        for name, (est, pv, lo, hi) in sorted(path_coeffs.items()):
             sig = "***" if pv < 0.001 else "**" if pv < 0.01 else "*" if pv < 0.05 else ""
-            print(f"{name:<55} {est:>10.4f} {pv:>10.4f} {sig}")
+            print(f"{name:<55} {est:>8.4f}  [{lo:>6.3f}, {hi:>6.3f}] {pv:>10.4f} {sig}")
     else:
         print("No path_type coefficients found — check data.")
+
+
+# ---------------------------------------------------------------------------
+# Logistic regression by wording (separate models per wording)
+# ---------------------------------------------------------------------------
+
+def run_logistic_by_wording(df: pd.DataFrame) -> None:
+    """
+    Run a separate logistic regression for each terminal_wording_id.
+
+    Each model uses scenario_id as a fixed-effect covariate and drops the
+    wording term since the subset is a single wording.
+    """
+    wordings = sorted(df["terminal_wording_id"].cat.categories.tolist())
+
+    for wording in wordings:
+        subset = df[df["terminal_wording_id"] == wording].copy()
+        n_scenarios = subset["scenario_id"].nunique()
+        n_obs = len(subset)
+
+        print(f"\n{'='*70}")
+        print(f"  Wording: {wording}  |  scenarios: {n_scenarios}  |  obs: {n_obs}")
+        print(f"{'='*70}")
+
+        if n_scenarios < 3:
+            print(f"  Skipping — too few scenarios ({n_scenarios}) for stable estimates.")
+            continue
+
+        try:
+            model = smf.logit(
+                "verdict ~ C(path_type, Treatment('direct')) + C(scenario_id)",
+                data=subset,
+            )
+            result = model.fit(method="bfgs", disp=False)
+        except Exception as e:
+            print(f"  Model failed: {e}")
+            continue
+
+        params = result.params
+        pvals = result.pvalues
+        ci = result.conf_int()
+
+        header = f"  {'Path type':<40} {'Log-OR':>8} {'95% CI':>18} {'p-value':>10}"
+        print(header)
+        print("  " + "-" * (len(header) - 2))
+
+        for k in params.index:
+            if "path_type" not in k:
+                continue
+            est = params[k]
+            pv = pvals[k]
+            lo, hi = ci.loc[k, 0], ci.loc[k, 1]
+            sig = "***" if pv < 0.001 else "**" if pv < 0.01 else "*" if pv < 0.05 else ""
+            label = k.replace("C(path_type, Treatment('direct'))[T.", "").rstrip("]")
+            print(f"  {label:<40} {est:>8.4f}  [{lo:>6.3f}, {hi:>6.3f}] {pv:>10.4f} {sig}")
+
+        print(f"\n  Raw p_yes by path_type (wording={wording}):")
+        props = subset.groupby("path_type")["verdict"].agg(n="count", p_yes="mean").reset_index()
+        for _, row in props.iterrows():
+            print(f"    {row['path_type']:<20} {row['p_yes']:.3f}  (n={int(row['n'])})")
 
 
 # ---------------------------------------------------------------------------
@@ -166,7 +276,37 @@ def main() -> None:
     parser.add_argument(
         "--use-pymer4",
         action="store_true",
-        help="Use pymer4/lme4 GLMM instead of statsmodels (requires R)",
+        help="Use pymer4/lme4 GLMM instead of GEE (requires R + lme4)",
+    )
+    parser.add_argument(
+        "--ambiguous-only",
+        action="store_true",
+        help=(
+            "Filter to scenarios where the direct path is ambiguous "
+            "(p_yes between --floor and --ceiling). Removes floor/ceiling "
+            "scenarios where path dependence is undetectable by definition."
+        ),
+    )
+    parser.add_argument(
+        "--floor",
+        type=float,
+        default=0.2,
+        help="Lower bound for ambiguous filter (default: 0.2)",
+    )
+    parser.add_argument(
+        "--ceiling",
+        type=float,
+        default=0.8,
+        help="Upper bound for ambiguous filter (default: 0.8)",
+    )
+    parser.add_argument(
+        "--by-wording",
+        action="store_true",
+        help=(
+            "Run a separate logistic regression for each terminal wording (W1, W2, W3). "
+            "Directly tests path_type significance within each wording "
+            "rather than relying on interaction terms."
+        ),
     )
     args = parser.parse_args()
 
@@ -179,12 +319,20 @@ def main() -> None:
 
     print(f"Loaded {len(df)} completed runs.")
     df = prepare(df)
+
+    if args.ambiguous_only:
+        df = filter_ambiguous_scenarios(df, lo=args.floor, hi=args.ceiling)
+        if df.empty:
+            sys.exit(1)
+
     print_condition_summary(df)
 
-    if args.use_pymer4:
+    if args.by_wording:
+        run_logistic_by_wording(df)
+    elif args.use_pymer4:
         run_pymer4(df)
     else:
-        run_statsmodels(df)
+        run_logistic(df)
 
 
 if __name__ == "__main__":
