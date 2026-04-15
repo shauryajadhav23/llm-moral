@@ -1,0 +1,59 @@
+id: intergenerational-02
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A national parliament is voting on whether to authorize a $180 billion
+  sovereign debt issuance to fund an immediate overhaul of the country's
+  deteriorating rail and water infrastructure. Repayment, with interest,
+  would fall on taxpayers over the following 40 years.
+
+considerations:
+  C1:
+    text: >
+      Infrastructure economists project that if the investment is
+      not made within five years, rail and water systems will face
+      cascading failures within 15 to 20 years, with remediation
+      costs at that stage estimated at 2.4 times the current
+      proposal. Three independent infrastructure analysis firms
+      have assessed the deterioration risk as high confidence.
+      The current proposal includes a 50-year service life estimate
+      for the rebuilt infrastructure.
+    depends_on: []
+  C2:
+    text: >
+      The debt-to-GDP ratio following issuance would reach 94 percent,
+      above the 90 percent threshold international monetary
+      organizations associate with elevated sovereign risk. The
+      finance ministry projects that annual debt service costs
+      would constrain discretionary government spending by 8 to
+      11 percent throughout the repayment period, affecting the
+      budget flexibility of governments not yet elected and
+      populations not yet voting.
+    depends_on: [C1]
+  C3:
+    text: >
+      Public polling shows 71 percent of current voters support
+      the infrastructure investment when framed as a national
+      modernization and job creation program. Support drops to
+      39 percent when the debt repayment burden on future taxpayers
+      is explicitly described. The parliamentary campaign supporting
+      the bill has emphasized the former framing and has not
+      featured the repayment obligation prominently in public
+      communications.
+    depends_on: []
+  C4:
+    text: >
+      An intergenerational equity analysis commissioned by a
+      parliamentary subcommittee found that the cohorts most
+      likely to bear the repayment burden — people currently under
+      10, or not yet born — are also the cohorts who would most
+      directly benefit from the infrastructure if it is maintained
+      over its projected service life. The analysis did not
+      adjudicate between these competing intergenerational claims.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the parliament to authorize the sovereign debt issuance without a binding public referendum? Answer yes or no."
+  W2: "Should parliament approve the $180 billion debt issuance without putting the repayment obligation to a direct public vote? Answer yes or no."
+  W3: "Would you approve of the legislature authorizing the long-term debt obligation without seeking explicit public consent through a referendum? Answer yes or no."

@@ -1,0 +1,58 @@
+id: autonomy-consent-07
+type: autonomy_consent
+independence_class: commutative
+
+setup: >
+  A 58-year-old woman with stage IV pancreatic cancer has a prognosis
+  of four to six months. She has requested medical assistance in dying
+  under her jurisdiction's MAID legislation, for which she meets all
+  legal eligibility criteria. The physician assigned to assess her
+  request holds a sincere conscientious objection to MAID and must
+  decide whether to complete the assessment or formally recuse.
+
+considerations:
+  C1:
+    text: >
+      The patient has been assessed as decisionally competent by a
+      consulting psychiatrist. She has discussed the request with
+      her adult children, who are aware of and do not oppose her
+      decision. She has submitted a written request, waited the
+      mandatory reflection period, and reaffirmed her decision
+      at each required step. Her stated reasons center on
+      avoiding a dying process she witnessed her own mother
+      undergo and describes as "prolonged and without dignity."
+    depends_on: []
+  C2:
+    text: >
+      The physician's objection is documented with the hospital's
+      conscientious objection registry. Under the jurisdiction's
+      MAID legislation, physicians with registered objections are
+      required to provide a formal referral to a non-objecting
+      colleague within two business days of a patient request.
+      The physician has not yet issued the referral.
+    depends_on: []
+  C3:
+    text: >
+      The nearest non-objecting MAID assessor is located 140
+      kilometres away and operates a waiting list of three to four
+      weeks. The patient's functional decline is progressing
+      faster than initially projected; her palliative care
+      physician has documented that the window in which she
+      would retain sufficient capacity to complete the process
+      may close within five to six weeks.
+    depends_on: []
+  C4:
+    text: >
+      The patient has told the assessing physician directly that
+      she does not want to be transferred to an unfamiliar
+      provider at this stage of her illness and has asked the
+      physician to reconsider their objection in light of
+      her specific circumstances. The physician's professional
+      college has issued guidance that conscientious objection
+      does not extend to refusing the referral requirement.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the physician to refuse to complete the MAID assessment based on conscientious objection? Answer yes or no."
+  W2: "Should the physician decline to perform the MAID assessment and issue only the required referral? Answer yes or no."
+  W3: "Would you approve of the physician invoking conscientious objection to avoid completing this patient's MAID assessment? Answer yes or no."

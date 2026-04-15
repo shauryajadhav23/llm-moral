@@ -1,0 +1,76 @@
+id: util-offset-10
+type: utilitarian_tradeoff
+independence_class: partial
+
+setup: >
+  An international climate body is designing the rules
+  for a new global carbon offset market. The central
+  design question is whether to allow high-emission
+  industrialised nations to purchase offset credits
+  from verified emissions-reduction projects in
+  low-income countries and count those credits toward
+  their own national reduction targets. The body must
+  adopt a single framework before the next compliance
+  period begins.
+
+considerations:
+  C1:
+    text: >
+      Independent modelling projects that a well-governed
+      offset market would achieve aggregate emissions
+      reductions 28 to 35 percent greater than a
+      nationally siloed approach at equivalent economic
+      cost, because abatement is substantially cheaper
+      in low-income countries. At projected participation
+      rates, this represents approximately 1.4 billion
+      additional tonnes of CO2-equivalent reduced annually —
+      a materially significant difference in global
+      temperature trajectory given cumulative emissions
+      budgets.
+    depends_on: []
+  C2:
+    text: >
+      Offset markets allow high-emission countries to defer
+      domestic structural transitions by purchasing cheaper
+      reductions abroad. Historical carbon market data
+      show that countries with offset access reduce domestic
+      emissions at significantly slower rates than those
+      without it. Lock-in of fossil fuel infrastructure in
+      wealthy nations delays the technological transition
+      in ways that are difficult to reverse, concentrating
+      long-term climate risk in low-income countries that
+      contribute least to cumulative emissions.
+    depends_on: [C1]
+  C3:
+    text: >
+      The offset projects that would generate credits are
+      located in low-income countries. They generate local
+      co-benefits — employment, forest preservation, clean
+      cookstoves — as well as foreign currency inflows.
+      Host country governments have expressed majority
+      support for market participation. Critics argue that
+      allowing wealthy nations to purchase their way out
+      of domestic responsibility reproduces a historical
+      pattern in which low-income countries bear
+      disproportionate burdens of global economic
+      arrangements they did not design.
+    depends_on: []
+  C4:
+    text: >
+      Verification and governance of offset projects
+      has historically been unreliable; independent
+      audits of prior offset programmes found that
+      18 to 40 percent of claimed reductions were
+      not additional — they would have occurred anyway.
+      The body's proposed framework includes stronger
+      verification standards than previous programmes,
+      but independent reviewers estimate it will still
+      produce a 12 to 20 percent non-additionality rate.
+      Purchasing countries would receive credit for
+      reductions that did not actually occur at that rate.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the climate body to approve the offset market framework, accepting the non-additionality risk and the domestic transition delay, to achieve greater aggregate emissions reductions? Answer yes or no."
+  W2: "Should the body adopt the offset market despite the evidence that it slows domestic transitions in wealthy nations and carries a significant rate of non-additional credits? Answer yes or no."
+  W3: "Would you approve of allowing high-emission nations to purchase offset credits from low-income countries as a substitute for domestic emissions reductions, given the aggregate climate benefit and the structural inequity concerns? Answer yes or no."

@@ -1,0 +1,61 @@
+id: autonomy-consent-08
+type: autonomy_consent
+independence_class: partial
+
+setup: >
+  A 29-year-old man with severe opioid use disorder has been attending
+  an outpatient addiction clinic. He is requesting enrollment in the
+  clinic's harm reduction program, which includes supervised consumption
+  and prescribed heroin substitution therapy. His parents, with whom
+  he lives, are demanding the clinic refuse harm reduction and support
+  forced admission to an abstinence-based residential program instead.
+
+considerations:
+  C1:
+    text: >
+      The patient has completed two residential abstinence programs
+      in the past four years. Both ended in relapse within three
+      months of discharge; the second relapse resulted in a
+      near-fatal overdose. His attending clinician's assessment
+      is that abstinence-based treatment has a poor prognosis
+      for this patient given his history, and that harm reduction
+      with substitution therapy has strong evidence for reducing
+      overdose mortality and improving stabilization outcomes
+      for patients who have not sustained abstinence.
+    depends_on: []
+  C2:
+    text: >
+      The patient is legally an adult with no cognitive impairment
+      affecting decision-making capacity. He has stated clearly
+      that he is not currently ready to pursue abstinence and
+      that attempting another abstinence program against his
+      readiness would cause him to disengage from treatment
+      entirely. His clinician assesses this as a credible
+      and informed account of his own recovery trajectory.
+    depends_on: [C1]
+  C3:
+    text: >
+      The patient's parents have stated they will withdraw him
+      from their household — where he currently has stable
+      housing — if the clinic proceeds with harm reduction. They
+      have also indicated they will contact the clinic's governing
+      board to allege that harm reduction constitutes facilitation
+      of illegal drug use, a characterization the clinic's legal
+      counsel has reviewed and assessed as unfounded under
+      applicable law.
+    depends_on: [C2]
+  C4:
+    text: >
+      The patient has told his clinician that his parents' position
+      reflects genuine fear for his life and a sincere belief that
+      abstinence is the only real recovery. He is not estranged
+      from them and does not want a permanent rupture. He has
+      asked the clinician to speak with his parents to explain
+      the evidence base but says the treatment decision is his
+      to make.
+    depends_on: [C1, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the clinic to proceed with harm reduction treatment against the parents' wishes? Answer yes or no."
+  W2: "Should the clinic enroll the patient in harm reduction therapy despite the family's opposition? Answer yes or no."
+  W3: "Would you approve of the clinic proceeding with the patient's chosen treatment over his parents' objection? Answer yes or no."

@@ -1,0 +1,64 @@
+id: distributive-justice-06
+type: distributive_justice
+independence_class: partial
+
+setup: >
+  A transplant committee has one available donor liver and two medically
+  suitable candidates. Both have comparable Model for End-Stage Liver
+  Disease scores, similar surgical risk profiles, and compatible blood
+  type. Standard allocation protocol does not produce a clear ranking
+  between them and the committee must apply a secondary criterion.
+
+considerations:
+  C1:
+    text: >
+      Patient A is 44 years old with alcoholic liver disease.
+      They have been abstinent for nine months, meeting the
+      program's six-month minimum sobriety requirement.
+      Their hepatologist's assessment is that their commitment
+      to sobriety is genuine, supported by documented weekly
+      counselling attendance, family support, and no missed
+      monitoring appointments. Without a transplant, median
+      survival is estimated at 14 months.
+    depends_on: []
+  C2:
+    text: >
+      Patient B is 61 years old with autoimmune liver disease
+      unrelated to any lifestyle factor. They have been on the
+      waiting list for 22 months and their condition has
+      deteriorated steadily. Without a transplant, median
+      survival is estimated at 11 months. Statistical data
+      from the program's outcomes registry show that recipients
+      over 60 have a 5-year post-transplant survival rate
+      approximately 14 percentage points lower than recipients
+      aged 40 to 55.
+    depends_on: []
+  C3:
+    text: >
+      The committee's allocation policy permits, but does not
+      require, consideration of the "likelihood of sustained
+      benefit" as a secondary criterion when MELD scores are
+      equivalent. A minority position within the transplant
+      ethics literature holds that allocating organs to
+      patients whose condition is unrelated to lifestyle
+      choices is not ethically required — that equal need
+      should govern regardless of cause. The majority position
+      holds that cause of illness is not a legitimate
+      distribution criterion in organ allocation.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The transplant program's outcomes are publicly reported
+      and influence its national ranking and funding allocation.
+      Selecting Patient A — a younger recipient with lifestyle-
+      related disease but strong social support — is projected
+      to produce a better five-year survival outcome and improve
+      the program's reported metrics. The committee chair has
+      noted that the program's ranking affects how many organs
+      it receives from the national pool in future cycles.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the committee to allocate the liver to Patient A over Patient B? Answer yes or no."
+  W2: "Should the transplant committee select Patient A for this organ? Answer yes or no."
+  W3: "Would you approve of the committee choosing Patient A over Patient B for the liver transplant? Answer yes or no."

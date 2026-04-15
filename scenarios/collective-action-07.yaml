@@ -1,0 +1,63 @@
+id: collective-action-07
+type: collective_action
+independence_class: partial
+
+setup: >
+  A regional hospital network is the only major healthcare provider
+  in a rural area. It has been asked to join a national data-sharing
+  consortium that would pool anonymised patient records to improve
+  disease modeling and drug safety surveillance. Participation is
+  voluntary. Thirty-one of the country's forty comparable regional
+  networks have already joined.
+
+considerations:
+  C1:
+    text: >
+      The consortium's epidemiological models improve in accuracy
+      with each additional network that joins, because rare
+      conditions and adverse drug events require large population
+      samples to detect meaningful signals. Independent researchers
+      have documented that the nine non-participating networks
+      serve populations whose demographic profile — older, more
+      rural, higher rates of specific chronic diseases — is
+      underrepresented in the current dataset, creating a
+      systematic gap in the models' applicability to those groups.
+    depends_on: []
+  C2:
+    text: >
+      The hospital network's legal counsel has assessed the
+      consortium's data governance framework as compliant with
+      applicable privacy law. However, an independent privacy
+      audit commissioned by the network found two anonymisation
+      processes that could, in combination with publicly available
+      data, enable re-identification of patients in small rural
+      communities with unusual diagnoses. The consortium has
+      acknowledged the finding and says a technical fix is
+      under development but has not yet been deployed.
+    depends_on: [C1]
+  C3:
+    text: >
+      A patient advocacy group representing the network's service
+      area has submitted a formal objection to participation,
+      citing both the re-identification risk and a broader
+      concern that the community was not consulted before the
+      network's leadership initiated the joining process. The
+      group has requested a community consultation period of
+      90 days before any decision is finalised.
+    depends_on: [C2]
+  C4:
+    text: >
+      The consortium is currently tracking an emerging drug
+      interaction signal in a medication widely prescribed in
+      rural areas. Its lead researcher has privately told the
+      network's CEO that the current dataset is insufficient
+      to reach statistical confidence, and that inclusion of
+      the network's records would likely determine whether
+      the signal represents a genuine safety concern requiring
+      a regulatory alert.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the hospital network to join the data consortium before the re-identification vulnerability is fixed? Answer yes or no."
+  W2: "Should the network proceed with joining the consortium despite the unresolved privacy vulnerability? Answer yes or no."
+  W3: "Would you approve of the network joining the data-sharing consortium now rather than waiting for the anonymisation fix? Answer yes or no."

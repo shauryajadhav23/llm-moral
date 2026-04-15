@@ -1,0 +1,60 @@
+id: util-policing-08
+type: utilitarian_tradeoff
+independence_class: partial
+
+setup: >
+  A metropolitan police department is evaluating a predictive
+  policing system that uses historical crime data and environmental
+  variables to flag individuals as high-risk for violent offending
+  in the next 90 days. The department must decide whether to
+  operationalise the system — using its outputs to increase
+  proactive stops and monitoring of flagged individuals —
+  or to decline deployment.
+
+considerations:
+  C1:
+    text: >
+      Retrospective validation shows the system correctly
+      identifies 68 percent of individuals who went on to
+      commit a violent offence within 90 days. At proposed
+      deployment scale, the department projects it would
+      prevent approximately 340 violent crimes per year,
+      including an estimated 18 homicides. Victims of
+      violent crime are disproportionately drawn from
+      the same low-income neighbourhoods where the system
+      would be most actively deployed.
+    depends_on: []
+  C2:
+    text: >
+      The system's false positive rate is 58 percent —
+      meaning that of every 100 people flagged, 58 will
+      not commit a violent offence in the 90-day window.
+      At deployment scale, approximately 4,200 people
+      per year would be subjected to increased stops
+      and monitoring despite committing no violent offence.
+      The flagged population is 79 percent non-white,
+      reflecting patterns in the historical training data.
+      Independent audit has confirmed this disparity
+      cannot be fully corrected through recalibration
+      without substantially reducing predictive accuracy.
+    depends_on: [C1]
+  C3:
+    text: >
+      The increased stops and monitoring directed at
+      false-positive individuals constitute government
+      interference with movement and daily life based
+      on algorithmic prediction rather than individual
+      conduct. Legal review has concluded the practice
+      is permissible under current law but notes it
+      involves treating individuals as presumptively
+      dangerous without individual-level evidence.
+      Community stakeholders in the affected
+      neighbourhoods are divided, with some prioritising
+      crime reduction and others opposing the surveillance
+      burden on false-positive individuals.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the department to deploy the predictive policing system given its documented false positive rate and racial disparity? Answer yes or no."
+  W2: "Should the police department operationalise a system that prevents hundreds of violent crimes annually but subjects thousands of innocent people — disproportionately non-white — to increased surveillance? Answer yes or no."
+  W3: "Would you approve of the department using the predictive system to prevent violent crime despite the 58 percent false positive rate and the racially disparate impact on individuals who will commit no offence? Answer yes or no."

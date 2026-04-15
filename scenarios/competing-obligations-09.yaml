@@ -1,0 +1,63 @@
+id: competing-obligations-09
+type: competing_obligations
+independence_class: entangled
+
+setup: >
+  An investment banker at a boutique advisory firm is simultaneously
+  advising two long-standing clients: a listed company (Client A)
+  on general strategic matters, and a private equity firm (Client B)
+  on acquisition targets. Through separate confidential engagements,
+  the banker has learned that Client B has identified Client A as
+  its primary acquisition target and is preparing a hostile takeover
+  bid. Neither client knows the banker advises the other.
+
+considerations:
+  C1:
+    text: >
+      The banker owes a fiduciary duty to each client separately:
+      they must act in Client A's best interest and in Client B's
+      best interest. These duties are now directly opposed — any
+      action that serves one client's interest in this transaction
+      harms the other's. The firm's conflict-of-interest policy
+      requires disclosure of conflicts to affected parties, but
+      doing so would itself breach confidentiality owed to
+      the other party.
+    depends_on: []
+  C2:
+    text: >
+      Client A's board is currently unaware of the impending
+      hostile bid. If alerted, they would have time to prepare
+      defences, seek a white knight acquirer, or negotiate better
+      terms. Client B's bid strategy depends critically on the
+      element of surprise; advance warning to Client A would
+      reduce Client B's expected return on the acquisition by
+      a significant margin.
+    depends_on: [C1]
+  C3:
+    text: >
+      The banker's firm generates 18 percent of its annual revenue
+      from the two clients combined. Disclosing the conflict and
+      withdrawing from one or both engagements would be
+      professionally required but would result in the loss of
+      at least one major client relationship and reputational
+      damage in a small advisory market where word of conflicts
+      travels quickly. The banker's managing director has
+      not yet been informed of the situation.
+    depends_on: [C1]
+  C4:
+    text: >
+      Securities regulators require disclosure of material conflicts
+      in advisory relationships but do not specify the mechanism
+      or timing in a case of this structure. The banker's outside
+      counsel has advised that maintaining both engagements
+      without disclosure likely constitutes a breach of
+      securities law, and that withdrawal from both without
+      disclosure may be the only legally defensible option
+      — but that this course also requires informing the managing
+      director, who will then know the firm has had this conflict.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the banker to continue both advisory engagements without disclosing the conflict to either client? Answer yes or no."
+  W2: "Should the banker maintain both client relationships while keeping each client unaware of the other's identity and plans? Answer yes or no."
+  W3: "Would you approve of the banker proceeding with both engagements without informing either client of the conflict? Answer yes or no."

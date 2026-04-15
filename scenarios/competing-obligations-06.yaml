@@ -1,0 +1,60 @@
+id: competing-obligations-06
+type: competing_obligations
+independence_class: entangled
+
+setup: >
+  A criminal defense attorney has just secured an acquittal for a client
+  charged with aggravated assault. Immediately after the verdict, the client
+  tells the attorney in a private conversation that he intends to assault
+  the same victim again that evening. The attorney must decide whether
+  to breach attorney-client confidentiality to warn the victim or
+  law enforcement.
+
+considerations:
+  C1:
+    text: >
+      Attorney-client privilege is a foundational rule of professional
+      conduct, not merely a procedural protection. It enables clients
+      to speak candidly with counsel, which is essential to the
+      functioning of the adversarial justice system. The jurisdiction's
+      bar rules permit — but do not require — disclosure to prevent
+      reasonably certain death or substantial bodily harm.
+      The attorney's firm has a policy of erring toward non-disclosure
+      in ambiguous cases to preserve the integrity of the privilege.
+    depends_on: []
+  C2:
+    text: >
+      The client's statement was specific: a named victim, a stated
+      evening, and a described method. The attorney's assessment,
+      based on the client's demeanor and the pattern of conduct
+      in the underlying case, is that the threat is credible
+      and not rhetorical. The victim is not represented by
+      any attorney and has no independent reason to expect
+      an imminent threat tonight.
+    depends_on: [C1]
+  C3:
+    text: >
+      Disclosure would almost certainly end the attorney's
+      ability to represent this client in any subsequent
+      proceedings, expose the firm to a bar complaint for
+      breach of privilege, and set a precedent within the firm
+      that clients' post-verdict statements are not confidential.
+      Other clients may learn of the disclosure and withhold
+      information in future cases, reducing the attorney's
+      effectiveness as a defender.
+    depends_on: [C1]
+  C4:
+    text: >
+      The victim was seriously injured in the original assault.
+      If the attorney does not disclose and the client carries
+      out the threat, the attorney will have had specific
+      advance knowledge of the attack and taken no action.
+      No legal liability would attach to the attorney under
+      current law, but the attorney would bear personal moral
+      responsibility for the outcome.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the attorney to breach client confidentiality and warn the victim or law enforcement? Answer yes or no."
+  W2: "Should the attorney disclose the client's threat to the intended victim or police? Answer yes or no."
+  W3: "Would you approve of the attorney breaking attorney-client privilege to prevent the threatened assault? Answer yes or no."

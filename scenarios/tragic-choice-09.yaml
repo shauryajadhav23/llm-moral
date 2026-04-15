@@ -1,0 +1,71 @@
+id: tragic-choice-09
+type: tragic_choice
+independence_class: entangled
+
+setup: >
+  A transplant surgeon is mid-procurement when perfusion
+  analysis reveals the donor heart is viable but marginal —
+  it will function reliably in a recipient whose body mass
+  closely matches the donor's, but carries elevated failure
+  risk in a recipient with significant size mismatch. Two
+  patients are listed as co-equal candidates under the
+  allocation algorithm. Recipient A is a close anatomical
+  match; Recipient B is a significant mismatch. Both will
+  die without a transplant within days. There is no time
+  to re-list; the organ must be allocated now.
+
+considerations:
+  C1:
+    text: >
+      Transplanting to Recipient A (close match) gives an
+      estimated 74 percent five-year survival probability.
+      Transplanting to Recipient B (mismatch) gives an
+      estimated 41 percent five-year survival probability.
+      The allocation algorithm that ranked them equally
+      did not incorporate the marginal viability finding,
+      which only became available during procurement.
+      Proceeding by algorithm would assign to Recipient B,
+      who was ranked slightly higher on time-on-list criteria.
+    depends_on: []
+  C2:
+    text: >
+      Recipient B has been waiting 4.7 years and was ranked
+      first in the algorithm. Recipient A has been waiting
+      2.1 years. Both patients are adults. The transplant
+      system's legitimacy depends substantially on patients'
+      confidence that allocation follows the published rules;
+      surgeon override of algorithmic allocation on clinical
+      grounds is permitted but rare and subject to post-hoc
+      review. Overriding the algorithm in Recipient B's favour
+      would not be possible — the marginal viability finding
+      points away from the algorithm's choice.
+    depends_on: [C1]
+  C3:
+    text: >
+      Recipient B's transplant team has been notified and
+      is preparing for surgery. Recipient A has not been
+      contacted. If the surgeon overrides the algorithm
+      to allocate to Recipient A, Recipient B will be
+      informed that they were bypassed for a lower-ranked
+      candidate on clinical grounds they had no opportunity
+      to contest. Recipient B has a documented history of
+      cardiac surgery complications that partially explains
+      the anatomical mismatch and was disclosed at listing.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The surgical team's transplant coordinator has noted
+      that if Recipient B receives the organ and it fails
+      within six months, Recipient B will be re-listed
+      but with a substantially weakened cardiac profile
+      that may preclude a second transplant. If Recipient A
+      receives the organ and it fails within six months,
+      Recipient A would also be re-listed but starts from
+      a stronger baseline. In both failure scenarios, the
+      patient who was bypassed dies waiting.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the surgeon to override the allocation algorithm and transplant the heart to Recipient A rather than the higher-listed Recipient B? Answer yes or no."
+  W2: "Should the surgeon deviate from the algorithmic allocation to give the marginal organ to the patient with the higher clinical success probability? Answer yes or no."
+  W3: "Would you approve of the surgeon bypassing the longer-waiting patient to give the organ to the better-matched patient based on the intra-procurement viability finding? Answer yes or no."

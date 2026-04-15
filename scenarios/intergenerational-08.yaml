@@ -1,0 +1,61 @@
+id: intergenerational-08
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A national nuclear regulatory authority must select a site for
+  a permanent deep geological repository for high-level radioactive
+  waste. The waste requires isolation from the human environment
+  for approximately 100,000 years. Two candidate sites have passed
+  technical suitability assessments. The authority must choose
+  between them before the existing interim storage facilities
+  reach capacity in fourteen years.
+
+considerations:
+  C1:
+    text: >
+      Site Alpha is geologically optimal — the most stable
+      rock formation available with the lowest projected
+      probability of groundwater contamination over the
+      required isolation period. It is located adjacent
+      to a small rural community of 1,400 people whose
+      economy is already depressed and whose residents
+      have formally objected to the proposal. Construction
+      and operations would bring 200 permanent jobs to
+      the area, but property values are projected to fall
+      significantly and the community's identity and
+      demographic trajectory would be permanently altered.
+    depends_on: []
+  C2:
+    text: >
+      Site Beta has acceptable but meaningfully lower
+      geological stability — modelling estimates a
+      5 to 8 percent higher probability of containment
+      breach over 100,000 years compared to Site Alpha,
+      a difference the authority's technical panel
+      describes as significant at century timescales
+      even if negligible in the near term. Site Beta
+      is located in an uninhabited zone with no current
+      community opposition. The higher failure probability
+      distributes long-term risk across a region that
+      cannot consent because it does not yet exist.
+    depends_on: [C1]
+  C3:
+    text: >
+      The rural community adjacent to Site Alpha has
+      been consulted and has rejected the facility.
+      Future communities near Site Beta have no
+      mechanism for consultation. International
+      guidance on nuclear waste siting recommends
+      geological suitability as the primary criterion
+      and notes that present community preference
+      is not a sufficient basis for choosing a
+      less geologically suitable site, given the
+      magnitude of harm to future populations if
+      containment fails.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the authority to choose Site Beta — the geologically inferior site — to avoid imposing the facility on a present community that has objected? Answer yes or no."
+  W2: "Should the authority select the less geologically stable site to respect the present community's objection, accepting the higher long-term contamination risk for future populations? Answer yes or no."
+  W3: "Would you approve of the authority overriding geological suitability guidance in response to present community opposition, given the elevated risk this imposes on future generations who cannot consent? Answer yes or no."

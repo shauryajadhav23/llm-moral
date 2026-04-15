@@ -1,0 +1,60 @@
+id: distributive-justice-07
+type: distributive_justice
+independence_class: commutative
+
+setup: >
+  A city must choose between two technically equivalent sites for a
+  new waste processing facility. Both sites have passed all
+  environmental suitability assessments. The city's planning
+  department has presented the decision to the council as a
+  policy choice about burden distribution rather than a technical one.
+
+considerations:
+  C1:
+    text: >
+      Site A is in a higher-income neighbourhood with no existing
+      industrial infrastructure. Residents in that neighbourhood
+      have no current environmental burden from industrial facilities.
+      Siting there would distribute the new burden more evenly
+      across the city, in line with the planning department's
+      equity framework, but would affect property values in an
+      area whose residents have greater resources to mount
+      legal and political challenges.
+    depends_on: []
+  C2:
+    text: >
+      Site B is in a lower-income neighbourhood that already hosts
+      a highway interchange, a power substation, and a wastewater
+      pumping station. Environmental health data show that residents
+      in this neighbourhood have asthma and respiratory illness
+      rates 2.3 times the city average, a gap the city's public
+      health officer has attributed in part to cumulative industrial
+      exposure. Adding a fourth facility would further compound
+      an existing documented burden.
+    depends_on: []
+  C3:
+    text: >
+      Site B is $4.2 million cheaper to develop due to existing
+      utility connections and road access. The saved funds could
+      be directed to the city's housing repair programme, which
+      has a documented backlog of 340 low-income households awaiting
+      structural repairs. The planning department has noted that
+      this trade-off — lower capital cost enabling a different
+      social benefit — is not straightforward to evaluate.
+    depends_on: []
+  C4:
+    text: >
+      Residents of Site B's neighbourhood were not consulted
+      before either site was shortlisted. A community organisation
+      in that neighbourhood has submitted a formal objection,
+      citing the cumulative burden data and arguing that the
+      decision follows a documented historical pattern in the
+      city of siting unwanted infrastructure in low-income areas.
+      Residents of Site A's neighbourhood have not yet been
+      formally notified of the proposal.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the city to choose Site B for the waste processing facility? Answer yes or no."
+  W2: "Should the city site the new facility in the lower-income neighbourhood given the cost savings? Answer yes or no."
+  W3: "Would you approve of the council selecting Site B despite the cumulative environmental burden it already bears? Answer yes or no."

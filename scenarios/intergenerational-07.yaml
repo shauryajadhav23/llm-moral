@@ -1,0 +1,62 @@
+id: intergenerational-07
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A national government faces an acute economic recession
+  and is deliberating whether to draw down the country's
+  sovereign wealth fund — accumulated over thirty years
+  from resource revenues as an intergenerational savings
+  vehicle — to fund an immediate stimulus package. The
+  fund currently holds $42 billion. The proposed drawdown
+  is $18 billion, representing 43 percent of the fund.
+  Economists advising the government are divided on
+  whether the fund can be replenished within a generation
+  under plausible resource revenue scenarios.
+
+considerations:
+  C1:
+    text: >
+      The recession is projected to produce 340,000
+      additional unemployed people within eighteen months,
+      with concentrated harm among low-income workers
+      and recent graduates. Modelling suggests the
+      stimulus would reduce peak unemployment by
+      4 to 6 percentage points, preventing long-term
+      scarring effects on workers who lose employment
+      during formative career years. These are harms
+      to present people that the fund, if not deployed,
+      will not prevent.
+    depends_on: []
+  C2:
+    text: >
+      The sovereign wealth fund was established by
+      legislation with an explicit intergenerational
+      mandate — to preserve resource wealth for future
+      citizens who will inherit a depleted natural
+      resource base. A 43 percent drawdown would
+      substantially reduce the transfer available
+      to future generations who will receive fewer
+      natural resource revenues but face greater
+      fiscal demands from an aging population. Three
+      prior governments declined to draw on the fund
+      during comparable economic downturns.
+    depends_on: [C1]
+  C3:
+    text: >
+      Alternative fiscal instruments — deficit spending
+      with bond issuance — are available but would
+      cost an estimated $3.2 billion more in interest
+      over twenty years than the fund drawdown, effectively
+      transferring a different type of cost to future
+      taxpayers. The government's credit rating is
+      currently strong, meaning bond financing is
+      accessible at reasonable cost. The choice is
+      therefore between depleting a savings asset
+      and incurring a debt liability for future generations.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the government to draw down 43 percent of the sovereign wealth fund to address the present recession, given the intergenerational mandate under which the fund was established? Answer yes or no."
+  W2: "Should the government deplete nearly half the intergenerational savings fund to mitigate present unemployment, leaving significantly reduced resources for future citizens? Answer yes or no."
+  W3: "Would you approve of the government prioritising present workers over the fund's intergenerational mandate by drawing down a substantial portion of the sovereign wealth fund? Answer yes or no."

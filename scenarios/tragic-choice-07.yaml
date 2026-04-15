@@ -1,0 +1,69 @@
+id: tragic-choice-07
+type: tragic_choice
+independence_class: commutative
+
+setup: >
+  A public defender's office has one investigator available for
+  the next six weeks due to staffing cuts. Two capital cases
+  are simultaneously active. Client A has a trial date set in
+  five weeks that the judge has ruled cannot be continued —
+  a third continuance would result in dismissal of counsel.
+  Client B's trial is in eleven weeks. Both clients are charged
+  with murder and face the death penalty if convicted. An
+  adequate investigation of either case requires approximately
+  five to six weeks of full investigator time. The office cannot
+  acquire additional investigator capacity within the available
+  window.
+
+considerations:
+  C1:
+    text: >
+      Assigning the investigator to Client A's case gives it
+      the investigation necessary to mount a meaningful defence
+      before the immovable trial date. Client B's case would
+      then go to trial with investigation completed in the
+      remaining weeks, which experienced capital defenders
+      assess as inadequate for a complex murder charge.
+      Both clients face death; the sequencing of inadequacy
+      differs but not its severity.
+    depends_on: []
+  C2:
+    text: >
+      Assigning the investigator to Client B's case first
+      would leave Client A to go to trial in five weeks
+      with essentially no investigation. Client A's attorney
+      has identified three potential alibi witnesses whose
+      availability cannot be preserved beyond the trial date.
+      If those witnesses are not located and prepared before
+      trial, their testimony will be permanently lost. Client
+      B's potential exculpatory evidence does not have the
+      same time-sensitivity.
+    depends_on: [C1]
+  C3:
+    text: >
+      A third option — splitting investigator time evenly —
+      has been assessed by both attorneys as likely to produce
+      two inadequately investigated cases rather than one
+      adequate and one inadequate. Both attorneys agree that
+      partial investigation in capital cases produces worse
+      outcomes than full investigation of one and acknowledged
+      inadequacy of the other, because partial preparation
+      creates false confidence and misallocated preparation
+      time.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The public defender has reported the resource constraint
+      to the court and to the state bar's oversight office.
+      Neither has provided relief. A federal constitutional
+      claim of systematic indigent defence underfunding is
+      pending in a separate proceeding but will not be resolved
+      within the relevant timeframe. The decision about
+      investigator assignment rests entirely with the public
+      defender.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the public defender to assign the investigator to Client A's case first, knowing this leaves Client B without adequate investigation? Answer yes or no."
+  W2: "Should the public defender prioritise Client A given the time-sensitive alibi evidence, accepting that Client B's representation will be materially inadequate? Answer yes or no."
+  W3: "Would you approve of the public defender's decision to allocate the full investigator resource to Client A's imminent capital trial rather than splitting time between both clients? Answer yes or no."

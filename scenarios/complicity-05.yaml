@@ -1,0 +1,58 @@
+id: complicity-05
+type: complicity
+independence_class: partial
+
+setup: >
+  A structural engineer certified a residential building's safety
+  three years ago. A major crack has appeared in the building's
+  foundation. Upon re-inspection, the engineer has determined that
+  the soil compaction report they relied upon at certification
+  contained data from a different site — a substitution the engineer
+  now believes was made by the soil testing contractor without their
+  knowledge.
+
+considerations:
+  C1:
+    text: >
+      A review of the engineer's certification files confirms they
+      relied on a soil testing report referenced correctly in the
+      documentation chain but containing data from a different address.
+      Industry standard practice does not require engineers to
+      independently verify soil testing contractor data. A peer
+      reviewer who co-signed the certification also did not identify
+      the discrepancy. The soil testing contractor has since gone
+      out of business.
+    depends_on: []
+  C2:
+    text: >
+      The building currently houses 340 residents. A geotechnical
+      engineer retained after the crack appeared has assessed the
+      foundation risk as elevated but not imminently dangerous,
+      recommending remediation within eighteen months. The remediation
+      cost is estimated at $3.2 million. The building's owners are
+      currently pursuing remediation through their insurer without
+      full knowledge of how the original certification error occurred.
+    depends_on: [C1]
+  C3:
+    text: >
+      Voluntarily disclosing the soil data discrepancy to the
+      building's owners would expose the engineer to professional
+      liability claims, trigger a review by the state licensing
+      board, and could result in suspension of their license. The
+      engineer's practice employs four staff members, and the
+      engineer is the sole licensed engineer in the firm.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      If the engineer does not disclose, the building's owners
+      will proceed with remediation without understanding the cause
+      of the structural problem, and the insurer may settle based
+      on an incomplete account. Future purchasers of units in the
+      building will have no access to an accurate record of the
+      certification history.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the engineer to voluntarily disclose the soil data discrepancy to the building's owners? Answer yes or no."
+  W2: "Should the engineer inform the building's owners that the original certification relied on a misattributed soil report? Answer yes or no."
+  W3: "Would you approve of the engineer disclosing the certification error despite the professional liability risk it creates? Answer yes or no."

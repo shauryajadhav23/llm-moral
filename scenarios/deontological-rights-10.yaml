@@ -1,0 +1,63 @@
+id: deontological-rights-10
+type: deontological_rights
+independence_class: commutative
+
+setup: >
+  A state court system has adopted an algorithmic risk assessment
+  tool that produces a recidivism risk score used by judges at
+  sentencing. The tool assigns scores that are statistically
+  predictive of reoffending at the population level but has been
+  found to produce significantly higher risk scores for Black
+  defendants than white defendants with comparable criminal histories,
+  independent of individual conduct.
+
+considerations:
+  C1:
+    text: >
+      An independent audit of the tool's outputs over four years
+      found that Black defendants received high-risk scores at
+      2.1 times the rate of white defendants with identical prior
+      records, controlling for all factors the algorithm is
+      permitted to use. The tool's developers acknowledge the
+      disparity but attribute it to differences in community-level
+      factors the algorithm incorporates as proxies for individual
+      risk, which they describe as statistically valid predictors.
+    depends_on: []
+  C2:
+    text: >
+      Judges using the tool are not required to follow its
+      recommendations but surveys show that 74 percent report
+      the score influences their sentencing decisions, and that
+      a high-risk score increases the probability of a custodial
+      sentence by an estimated 26 percentage points on average.
+      Judges are not required to disclose to defendants that
+      a score has been generated or to share its value,
+      and defendants have no mechanism to challenge the
+      score's inputs or methodology.
+    depends_on: [C1]
+  C3:
+    text: >
+      The tool's aggregate predictive accuracy at the population
+      level is documented: courts using it have seen a 12 percent
+      reduction in reoffending rates compared to matched courts
+      without the tool. Proponents argue that the aggregate public
+      safety benefit justifies its use and that any disparate
+      impact reflects pre-existing social inequalities rather than
+      algorithmic bias, which the tool cannot be expected to correct.
+    depends_on: [C1]
+  C4:
+    text: >
+      A due process challenge to the tool's use has been dismissed
+      by the state supreme court, which held that judges retain
+      discretion and that the algorithm is one input among many.
+      A dissenting judge argued that in practice, the opacity
+      of the algorithm and its undisclosed use deny defendants
+      a meaningful opportunity to contest the basis for their
+      sentence, violating the right to be sentenced on accurate,
+      challengeable information.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the court system to continue using this algorithmic risk tool in sentencing decisions? Answer yes or no."
+  W2: "Should the courts continue to use the risk assessment algorithm given its documented racial disparity? Answer yes or no."
+  W3: "Would you approve of the court system maintaining use of this tool despite the evidence of racially disparate outcomes? Answer yes or no."

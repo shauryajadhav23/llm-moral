@@ -1,0 +1,68 @@
+id: util-sanctions-07
+type: utilitarian_tradeoff
+independence_class: commutative
+
+setup: >
+  An international coalition is deliberating whether to impose
+  broad economic sanctions on a country whose government has
+  conducted documented atrocities against an ethnic minority.
+  The sanctions would target the general economy rather than
+  named individuals, as targeted sanctions have already been
+  exhausted without effect. Intelligence assessments and
+  historical analogues inform the projected outcomes.
+
+considerations:
+  C1:
+    text: >
+      Broad economic sanctions are projected, based on
+      historical analogues, to produce a 30 to 40 percent
+      reduction in GDP within two years, generating
+      civilian hardship — including significant increases
+      in malnutrition and reduced access to medical
+      supplies — for a population of approximately 22 million,
+      the majority of whom bear no responsibility for
+      the government's conduct. Casualty modelling
+      estimates 8,000 to 14,000 excess civilian deaths
+      attributable to sanctions-induced deprivation
+      over a five-year period.
+    depends_on: []
+  C2:
+    text: >
+      The ongoing atrocities are projected, if unstopped,
+      to result in 40,000 to 70,000 deaths among the
+      targeted minority population over the same period.
+      The sanctions are estimated to have a 35 to 55 percent
+      probability of producing sufficient internal political
+      pressure to halt the atrocities within three years,
+      based on the government's documented economic
+      vulnerabilities and elite cohesion analysis.
+    depends_on: [C1]
+  C3:
+    text: >
+      The civilians who would bear the sanctions burden
+      are a different population from both the perpetrators
+      and the victims of the atrocities. A subset of
+      the civilian population actively supports the
+      government; the majority do not, and approximately
+      15 percent are members of the same ethnic minority
+      being persecuted. Imposing harm on the latter group
+      as an instrument of pressure on a government that
+      is already harming them compounds an existing injustice.
+    depends_on: []
+  C4:
+    text: >
+      No military intervention option is on the table.
+      Diplomatic negotiations have reached a documented
+      impasse. The alternative to sanctions is continued
+      international condemnation without material effect.
+      Coalition members are divided, with some arguing
+      that the uncertain probability of success does not
+      justify certain civilian harm, and others arguing
+      that inaction is itself a choice with a predictable
+      body count.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the coalition to impose broad economic sanctions that will predictably cause thousands of civilian deaths in order to create pressure to halt atrocities causing more deaths? Answer yes or no."
+  W2: "Should the coalition adopt broad sanctions that impose certain near-term civilian harm in exchange for a probability of halting greater ongoing atrocities? Answer yes or no."
+  W3: "Would you approve of the coalition imposing sanctions that predictably harm civilians — including members of the persecuted minority — as a tool to stop larger-scale atrocities? Answer yes or no."

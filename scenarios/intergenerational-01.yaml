@@ -1,0 +1,57 @@
+id: intergenerational-01
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A regional government is deciding whether to approve a rare earth
+  mineral extraction project on land that includes a major aquifer
+  system. The project would generate significant tax revenue and
+  employment for the current population but carries a documented
+  risk of aquifer contamination that would persist for decades
+  and affect residents not yet of voting age or not yet born.
+
+considerations:
+  C1:
+    text: >
+      Environmental impact assessments project a 30 to 45 percent
+      probability that extraction operations will contaminate the
+      primary aquifer currently supplying drinking water to 60,000
+      people in surrounding communities. Contamination, if it occurs,
+      would likely be detectable within 10 to 15 years of operations
+      commencing and would be effectively irreversible with existing
+      remediation technology.
+    depends_on: []
+  C2:
+    text: >
+      The project would generate $1.2 billion in tax revenue over
+      20 years and create 3,200 direct jobs in a region with 14
+      percent unemployment. The regional government's development
+      ministry estimates the revenue would fund two new hospitals
+      and a regional university campus over the same period.
+    depends_on: []
+  C3:
+    text: >
+      A demographic analysis commissioned by the legislature found
+      that 78 percent of current registered voters in the region
+      are over 45 and are statistically unlikely to be the people
+      managing aquifer degradation or its health consequences
+      30 years from now. Residents under 30 constitute 11 percent
+      of the electorate. The analysis did not account for future
+      residents not yet born.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The regional legislature has received a legal opinion
+      confirming that future generations have no standing under
+      current environmental law to challenge the decision, and
+      that the government's fiduciary duty under its enabling
+      legislation runs to current constituents only. The opinion
+      also notes that the aquifer contamination risk is probabilistic
+      and that the decision falls within normal governmental
+      discretion.
+    depends_on: [C1, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the regional government to approve the mineral extraction project given the aquifer contamination risk? Answer yes or no."
+  W2: "Should the regional legislature authorize the rare earth extraction project? Answer yes or no."
+  W3: "Would you approve of the government proceeding with extraction despite the long-term aquifer risk to future residents? Answer yes or no."

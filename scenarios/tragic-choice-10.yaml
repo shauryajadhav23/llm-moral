@@ -1,0 +1,71 @@
+id: tragic-choice-10
+type: tragic_choice
+independence_class: commutative
+
+setup: >
+  A conservation biologist leading a government-funded
+  programme must decide whether to proceed with an emergency
+  captive breeding intervention for one of two critically
+  endangered species. Funding and facility capacity allow
+  intervention for only one. Both species are projected to
+  go extinct in the wild within eight to twelve years without
+  intervention. The captive breeding programme, if successful,
+  would establish a population large enough to support
+  eventual reintroduction.
+
+considerations:
+  C1:
+    text: >
+      Species A is a large predator that plays a keystone
+      role in its ecosystem — its loss would trigger a
+      documented trophic cascade that biologists project
+      will drive secondary extinctions of three to five
+      further species within two decades. It is not
+      charismatic to the public and attracts little
+      conservation funding. The captive breeding protocol
+      for this species has a 55 percent estimated success
+      probability based on analogous programmes.
+    depends_on: []
+  C2:
+    text: >
+      Species B is a pollinator with a similarly critical
+      ecological role in a different biome, but whose
+      secondary extinction effects are less well-characterised
+      and more contested in the scientific literature.
+      It is highly charismatic and its selection would
+      generate substantial public attention and donor interest
+      that could fund expanded conservation work, including
+      potentially a second intervention programme within
+      three to four years. The captive breeding protocol
+      for this species has an 82 percent estimated success
+      probability.
+    depends_on: []
+  C3:
+    text: >
+      An independent scientific panel convened to advise
+      the programme concluded that the keystone predator
+      (Species A) represents the greater ecological priority
+      by a significant margin. However, the panel's mandate
+      was to assess ecological value, not programme success
+      probability or downstream funding effects. The
+      programme director is not bound by the panel's
+      recommendation.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      If Species B is selected and the fundraising projection
+      materialises, there is a plausible but not guaranteed
+      pathway to funding a Species A intervention within
+      four years. Climate modelling indicates that Species A's
+      habitat will have degraded substantially in four years,
+      reducing the viability of any intervention by that
+      point. The programme director estimates a 35 percent
+      probability that the four-year Species A intervention
+      would succeed if the Species B fundraising path is
+      taken.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the programme director to select Species B despite the scientific panel's finding that Species A represents the greater ecological priority? Answer yes or no."
+  W2: "Should the director choose the higher-success-probability, charismatic species over the ecologically more critical keystone predator? Answer yes or no."
+  W3: "Would you approve of the director selecting Species B on the grounds that its fundraising potential may eventually enable a second intervention, despite the risk that Species A's habitat degrades in the interim? Answer yes or no."

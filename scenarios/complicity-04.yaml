@@ -1,0 +1,57 @@
+id: complicity-04
+type: complicity
+independence_class: partial
+
+setup: >
+  A pharmaceutical purchasing manager approved a supplier contract
+  following standard due diligence eighteen months ago. The supplier
+  has since been indicted for systematically falsifying quality
+  control certificates across multiple customers. Some of the
+  supplier's products have already been administered to patients.
+
+considerations:
+  C1:
+    text: >
+      An internal post-indictment review of the purchasing manager's
+      due diligence process found it followed all required procedures
+      and industry standards. However, the review also identified
+      that one document in the supplier's qualification package
+      contained a formatting anomaly — a logo watermark inconsistent
+      with the certifying laboratory's known templates — that a more
+      careful review might have flagged for additional verification.
+      No auditors or peers who reviewed the package at the time
+      identified the anomaly.
+    depends_on: []
+  C2:
+    text: >
+      Laboratory testing commissioned after the indictment found
+      that 23 percent of affected batches had minor potency variations
+      outside specification but within a range the FDA considers
+      unlikely to cause clinical harm. Three adverse event reports
+      have been filed by patients who received the affected batches,
+      though a causal link to the potency variations has not been
+      established.
+    depends_on: [C1]
+  C3:
+    text: >
+      The company's compliance policy requires employees to
+      proactively document any information material to a regulatory
+      investigation within 30 days of discovery. The purchasing
+      manager identified the formatting anomaly 22 days ago during
+      their own review of the archived package. No one else at the
+      company is currently aware the anomaly exists.
+    depends_on: [C1]
+  C4:
+    text: >
+      The company's legal team has advised that formally documenting
+      the anomaly in the regulatory response — if the manager chooses
+      to do so — could be used by plaintiffs' attorneys in civil
+      litigation related to the adverse events, even though the
+      manager followed standard procedures and the anomaly was not
+      identified by anyone else at the time.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the purchasing manager to document the due diligence anomaly in the formal regulatory response? Answer yes or no."
+  W2: "Should the purchasing manager disclose the formatting anomaly they discovered in the supplier's qualification package? Answer yes or no."
+  W3: "Would you approve of the purchasing manager formally documenting the oversight despite the litigation risk this creates? Answer yes or no."

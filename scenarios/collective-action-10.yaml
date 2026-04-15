@@ -1,0 +1,65 @@
+id: collective-action-10
+type: collective_action
+independence_class: entangled
+
+setup: >
+  A small open-source software foundation maintains a cryptographic
+  library used by an estimated 4.2 million applications worldwide,
+  including in critical infrastructure. A government signals
+  intelligence agency has privately requested that the foundation
+  insert a backdoor into the library, framing it as a lawful
+  national security requirement. The foundation's board must decide
+  whether to comply without public disclosure.
+
+considerations:
+  C1:
+    text: >
+      The government agency has provided a classified legal
+      instrument it asserts compels compliance and prohibits
+      disclosure to the public, contributors, or downstream users.
+      The foundation's legal counsel believes the instrument is
+      valid under current law but notes that it has never been
+      tested in court for applicability to open-source foundations.
+      Refusal would likely trigger enforcement action and potential
+      criminal liability for board members.
+    depends_on: []
+  C2:
+    text: >
+      The backdoor, if inserted, would be present in the library
+      used by all 4.2 million dependent applications, including
+      healthcare systems, financial infrastructure, and communications
+      platforms in countries other than the requesting government's
+      own jurisdiction. Security researchers have assessed that
+      a backdoor of the requested design would be discoverable
+      by sophisticated state-level adversaries within 12 to 24
+      months of deployment.
+    depends_on: [C1]
+  C3:
+    text: >
+      The open-source development model depends on a community
+      of several thousand contributors who participate on the
+      explicit understanding that the codebase is transparent
+      and has no hidden modifications. Discovery of a covert
+      backdoor — whether by adversaries or by researchers —
+      would almost certainly destroy trust in the foundation and
+      the library irreversibly, eliminating the collective good
+      that the foundation provides. The foundation cannot insert
+      the backdoor and maintain the open-source community simultaneously.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      Three other major cryptographic library maintainers have
+      privately told the foundation's board, through back channels,
+      that they have received similar requests and declined,
+      accepting the legal risk. Their libraries have not yet
+      faced enforcement action. Coordinated public refusal and
+      disclosure by multiple foundations would likely generate
+      sufficient public and legislative pressure to contest
+      the legal instrument, but such coordination has not
+      been formally organised.
+    depends_on: [C1, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the foundation to refuse the government's backdoor request and publicly disclose it despite the legal risk? Answer yes or no."
+  W2: "Should the foundation defy the legal instrument, refuse to insert the backdoor, and disclose the request publicly? Answer yes or no."
+  W3: "Would you approve of the foundation publicly refusing the government's demand rather than complying in secret? Answer yes or no."

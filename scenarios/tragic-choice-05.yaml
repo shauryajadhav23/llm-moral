@@ -1,0 +1,46 @@
+id: tragic-choice-05
+type: tragic_choice
+independence_class: partial
+
+setup: >
+  A disaster response coordinator has two remaining emergency supply
+  caches that can only be airlifted to one of two cut-off communities
+  following a major earthquake. A second flight window may open within
+  36 hours, but weather conditions are uncertain. The coordinator
+  must decide now, without being able to communicate the options
+  to either community.
+
+considerations:
+  C1:
+    text: >
+      Community A is a rural village of 340 people. The earthquake
+      destroyed its water supply; local reserves will be exhausted
+      in approximately 48 hours. Twelve adults have injuries requiring
+      medical intervention, and eight residents are insulin-dependent
+      diabetics whose medication requires refrigeration no longer
+      available in the community.
+    depends_on: []
+  C2:
+    text: >
+      Community B is an isolated fishing settlement of 180 people.
+      It retains access to a freshwater spring but has lost all food
+      stores and its only medical facility. A radio relay from a
+      local medic reports three residents in critical condition from
+      injuries and four children under age five who were assessed as
+      acutely malnourished before the earthquake.
+    depends_on: []
+  C3:
+    text: >
+      Weather forecasting puts a 60 percent probability on a second
+      flight window opening within 36 hours that would allow the
+      remaining community to receive the second cache. There is a
+      40 percent probability of deteriorating conditions that would
+      prevent air access for an additional four to seven days.
+      Whichever community does not receive the first cache faces
+      its most critical needs during that window.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the coordinator to send the supply cache to Community A rather than Community B? Answer yes or no."
+  W2: "Should the coordinator prioritize Community A for the immediate supply delivery? Answer yes or no."
+  W3: "Would you approve of the coordinator directing the emergency supplies to Community A given these circumstances? Answer yes or no."

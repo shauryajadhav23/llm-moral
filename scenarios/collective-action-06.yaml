@@ -1,0 +1,60 @@
+id: collective-action-06
+type: collective_action
+independence_class: commutative
+
+setup: >
+  A mid-sized country is deciding whether to implement a unilateral
+  digital services tax on large technology platforms operating within
+  its borders. An international framework for coordinated digital
+  taxation has been under negotiation for four years without agreement.
+  The country's largest trading partners have warned that a unilateral
+  tax would trigger retaliatory tariffs on the country's goods exports.
+
+considerations:
+  C1:
+    text: >
+      The technology platforms subject to the proposed tax report
+      effective tax rates in the country of under 2 percent on locally
+      generated revenue by routing profits through low-tax
+      jurisdictions. The country's domestic businesses operating
+      in the same sectors pay an effective corporate rate of 21
+      percent. The tax gap is estimated at $2.4 billion annually
+      — revenue the government has earmarked for healthcare and
+      infrastructure spending.
+    depends_on: []
+  C2:
+    text: >
+      Fourteen countries have already implemented unilateral digital
+      services taxes. None has faced the retaliatory tariffs their
+      trading partners threatened, though two are currently in
+      formal trade dispute proceedings. Economic modeling commissioned
+      by the country's treasury projects a 60 percent probability
+      that retaliatory tariffs would reduce goods export revenue
+      by $800 million to $1.6 billion annually — potentially
+      exceeding digital tax receipts.
+    depends_on: []
+  C3:
+    text: >
+      The international negotiating framework has produced three
+      draft agreements over four years, each of which collapsed
+      under pressure from jurisdictions hosting the headquarters
+      of major technology companies. Independent analysts assess
+      the probability of a binding multilateral agreement within
+      five years as low. Without a unilateral move from some
+      countries, there is no documented mechanism by which
+      the collective problem resolves.
+    depends_on: []
+  C4:
+    text: >
+      The technology platforms have stated publicly that a
+      unilateral tax would cause them to reconsider infrastructure
+      investments and regional hiring plans in the country. The
+      country's technology sector employs 140,000 people and
+      accounts for 8 percent of GDP, including both domestic
+      firms and affiliates of the platforms subject to the tax.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the country to implement the unilateral digital services tax despite the risk of retaliation? Answer yes or no."
+  W2: "Should the country proceed with the digital tax without waiting for a multilateral agreement? Answer yes or no."
+  W3: "Would you approve of the country taxing digital platforms unilaterally given that a coordinated framework has repeatedly failed? Answer yes or no."

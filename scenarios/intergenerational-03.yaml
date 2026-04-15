@@ -1,0 +1,59 @@
+id: intergenerational-03
+type: intergenerational
+independence_class: entangled
+
+setup: >
+  A hospital ethics board is deciding whether to approve a clinical
+  research protocol that would enroll current patients in a longitudinal
+  study. The study's therapeutic benefits, if the research hypothesis
+  is confirmed, would emerge 15 to 20 years from now through changes
+  to clinical guidelines — too late to benefit the enrolled participants
+  in any direct way.
+
+considerations:
+  C1:
+    text: >
+      The study would recruit patients with a chronic inflammatory
+      condition. All participants would receive the current standard
+      of care and would not be delayed or denied any treatment.
+      The research protocol requires an additional monthly blood
+      draw and three annual questionnaires, carrying no therapeutic
+      value for participants. Compensation is $50 per year of
+      enrollment.
+    depends_on: []
+  C2:
+    text: >
+      The longitudinal data, if the hypothesized biomarker associations
+      are confirmed, would enable an early diagnostic test capable of
+      identifying at-risk patients 8 to 10 years earlier than current
+      methods. Modeled projections estimate this could prevent 2,000
+      to 4,000 cases of serious complications annually in the broader
+      patient population — benefits that would emerge after the expected
+      disease progression window of most enrolled participants.
+    depends_on: [C1]
+  C3:
+    text: >
+      An independent patient advisory group surveyed 40 people with
+      the target condition after full disclosure of the benefit
+      timeline. Thirty-one indicated they would voluntarily enroll
+      knowing the benefits would not apply to them personally.
+      The advisory group noted that altruistic motivation is common
+      in chronic disease patient communities and that the survey
+      results should be treated as indicative, not as a substitute
+      for individual informed consent.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The ethics board's charter specifies that approved studies must
+      show a reasonable prospect of direct benefit to participants
+      or their immediate community. Legal counsel advises that
+      future patients at the same hospital plausibly fall within
+      "immediate community" but that the interpretation is untested
+      and a regulator could challenge the approval on procedural
+      grounds.
+    depends_on: [C1, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the ethics board to approve the clinical protocol under its existing charter? Answer yes or no."
+  W2: "Should the ethics board authorize the longitudinal study despite its benefits accruing primarily to future patients? Answer yes or no."
+  W3: "Would you approve of the board permitting enrollment in a study that offers no direct benefit to participants? Answer yes or no."

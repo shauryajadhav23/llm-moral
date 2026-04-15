@@ -1,0 +1,54 @@
+id: loyalty-betrayal-01
+type: loyalty_betrayal
+independence_class: partial
+
+setup: >
+  A mid-level manager at a professional services firm has discovered
+  that their direct supervisor — who mentored them and advocated for
+  two promotions over four years — has been systematically inflating
+  billable hours charged to clients. The firm has an anonymous ethics
+  hotline but no mandatory self-reporting requirement for witnesses.
+
+considerations:
+  C1:
+    text: >
+      The manager has reviewed billing records and identified a
+      consistent pattern of 15 to 20 percent inflation in hours
+      charged to three long-term clients over 18 months. The total
+      estimated overbilling is $340,000. An accountant the manager
+      consulted independently confirmed the pattern is systematic
+      and cannot be attributed to documentation error or rounding.
+    depends_on: []
+  C2:
+    text: >
+      One of the three overbilled clients is a nonprofit organization
+      whose board the manager knows personally. The nonprofit operates
+      on thin margins; $340,000 represents approximately 12 percent
+      of its annual operating budget. The nonprofit's executive
+      director has mentioned in conversation that the firm's fees have
+      strained the organization's program spending.
+    depends_on: [C1]
+  C3:
+    text: >
+      The supervisor is named as a reference on the manager's pending
+      application to an MBA program with a submission deadline in
+      three weeks. The supervisor has already drafted and submitted
+      the letter. Reporting would almost certainly result in the
+      supervisor's termination and the withdrawal of the reference,
+      which is the only reference from a senior industry figure the
+      manager has.
+    depends_on: []
+  C4:
+    text: >
+      The manager consulted an employment attorney who advises that
+      whistleblower protections under applicable law would likely
+      apply to a report through the ethics hotline, though the
+      attorney also noted a non-trivial risk of constructive
+      dismissal tactics that would require the manager to initiate
+      litigation to remedy.
+    depends_on: [C1]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the manager to report the billing fraud through the ethics hotline? Answer yes or no."
+  W2: "Should the manager report the supervisor's billing inflation to the firm's ethics office? Answer yes or no."
+  W3: "Would you approve of the manager filing an ethics report against the supervisor who mentored and promoted them? Answer yes or no."

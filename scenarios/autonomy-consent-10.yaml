@@ -1,0 +1,59 @@
+id: autonomy-consent-10
+type: autonomy_consent
+independence_class: partial
+
+setup: >
+  A 52-year-old woman enrolled in a pivotal Phase III drug trial for
+  a rare autoimmune condition has requested withdrawal from the study
+  after 14 months of participation. She wishes to try an unproven
+  herbal protocol she encountered online. Her withdrawal at this stage
+  would reduce the trial's statistical power below the threshold
+  needed for regulatory approval.
+
+considerations:
+  C1:
+    text: >
+      The trial's consent documents clearly state that participation
+      is voluntary and that participants may withdraw at any time
+      for any reason without penalty. The patient signed this
+      consent, understood it at enrollment, and invokes it now.
+      She is assessed as fully competent. Her condition has
+      been stable during the trial, though it has not remitted.
+    depends_on: []
+  C2:
+    text: >
+      The drug has shown statistically significant efficacy in
+      the interim analysis. The principal investigator's assessment
+      is that the herbal protocol the patient wishes to pursue
+      has no clinical evidence base and is unlikely to benefit
+      her. If the trial fails to reach its enrollment threshold
+      at this stage, it cannot be restarted; the drug would not
+      receive regulatory approval and would be unavailable to
+      the estimated 40,000 patients who share the patient's
+      diagnosis.
+    depends_on: [C1]
+  C3:
+    text: >
+      The research team has asked the patient to reconsider
+      and has arranged a consultation with her treating physician,
+      who has also recommended she remain in the trial. The patient
+      has heard both perspectives and maintains her decision.
+      She has expressed guilt about the impact on other patients
+      but says her right to direct her own medical care overrides
+      that concern.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The trial's sponsor has contacted the patient's treating
+      physician to request that additional persuasion efforts
+      be made and has indicated that a supplementary enrollment
+      bonus offered to the physician's practice for each
+      retained participant remains in effect. The physician has
+      disclosed this to the research ethics board but has not
+      yet disclosed it to the patient.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the research team to continue attempts to persuade the patient to remain in the trial after she has clearly stated her decision to withdraw? Answer yes or no."
+  W2: "Should the research team make further persuasion attempts to keep the patient enrolled despite her stated wish to withdraw? Answer yes or no."
+  W3: "Would you approve of the team continuing to pressure the patient to remain in the study after her clear and repeated refusal? Answer yes or no."

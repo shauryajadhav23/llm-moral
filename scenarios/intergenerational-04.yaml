@@ -1,0 +1,60 @@
+id: intergenerational-04
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A national conservation agency is deciding whether to authorize a
+  large-scale herbicide eradication program targeting an invasive
+  plant species that has colonized a protected nature reserve. The
+  program would suppress native insect populations for 5 to 8 years
+  but, if successful, would allow native plant communities to recover
+  over the following 25 to 30 years.
+
+considerations:
+  C1:
+    text: >
+      The invasive species currently covers 34 percent of the
+      protected area and is projected to reach 60 percent within
+      15 years under current trajectories, at which point independent
+      ecologists assess native plant community recovery as likely
+      impossible. The herbicide eradication program has a 70 to 80
+      percent modeled probability of halting the invasion if applied
+      over three consecutive seasons.
+    depends_on: []
+  C2:
+    text: >
+      The herbicide would reduce native insect populations in
+      treatment zones by an estimated 40 to 55 percent over the
+      first three years of application, affecting pollinator
+      populations that support farming communities adjacent to the
+      reserve. Agricultural economists estimate crop yield reductions
+      in the adjacent zone of 8 to 15 percent during the treatment
+      period, affecting producers who have no involvement in the
+      invasion and no recourse to compensation under current law.
+    depends_on: [C1]
+  C3:
+    text: >
+      The three native insect species most likely to suffer significant
+      population losses include one classified as vulnerable under
+      national conservation law. Population modeling projects two of
+      the three would fully recover within eight years post-treatment;
+      the third has a 20 percent modeled probability of local
+      extirpation — permanent disappearance from the reserve —
+      if the program proceeds.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      The only non-chemical alternative — manual removal with
+      volunteer and contracted labor — has been modeled and found
+      capable of treating at most 6 percent of affected area per
+      year at current funding levels, insufficient to stop the
+      invasion. A biological control agent is in development but
+      would not be available for field deployment for at least
+      twelve years, by which time the invasion would likely have
+      reached the threshold of irreversibility.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the conservation agency to authorize the herbicide eradication program? Answer yes or no."
+  W2: "Should the agency proceed with the large-scale herbicide program given the risks to current native insect populations? Answer yes or no."
+  W3: "Would you approve of the agency using the herbicide program despite the probability of permanently eliminating a vulnerable insect species from the reserve? Answer yes or no."

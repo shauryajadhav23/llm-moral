@@ -1,0 +1,59 @@
+id: loyalty-betrayal-02
+type: loyalty_betrayal
+independence_class: partial
+
+setup: >
+  A professional cyclist on a leading Tour contender team has
+  discovered that the team's star domestique — a close friend and
+  ten-year teammate — is using a peptide hormone not yet listed
+  on the prohibited substances register but pharmacologically
+  equivalent to banned agents. The governing body's rules prohibit
+  substances with performance-enhancing mechanisms, not only those
+  explicitly listed.
+
+considerations:
+  C1:
+    text: >
+      The cyclist witnessed the domestique self-administering an
+      injectable compound. At the cyclist's direct question, the
+      domestique disclosed the substance and described it as a
+      "legal gray area." The cyclist has since consulted a sports
+      pharmacologist who confirmed the substance is not currently
+      listed but falls within the governing body's mechanism-based
+      prohibition. Anti-doping authorities have publicly stated
+      that athletes with knowledge of such use have an obligation
+      to report, though no explicit mandatory reporting rule exists
+      for athletes as distinct from team staff.
+    depends_on: []
+  C2:
+    text: >
+      The domestique has a seven-year-old child with a progressive
+      neurological condition. The domestique's cycling salary funds
+      a treatment program that is not covered by the national health
+      system and costs approximately €84,000 per year. A doping
+      finding would result in a multi-year ban and immediate contract
+      termination.
+    depends_on: []
+  C3:
+    text: >
+      If doping is found on the team roster, the team faces an
+      automatic internal investigation that could result in exclusion
+      from the current Tour. The team's lead captain, a two-time
+      champion currently riding in the best form of their career,
+      would lose their final competitive opportunity at a major
+      title. The captain has no involvement in or knowledge of
+      the domestique's substance use.
+    depends_on: [C1]
+  C4:
+    text: >
+      The cyclist is the only person besides the domestique who
+      knows. Reporting is possible through a confidential anti-doping
+      hotline; however, the investigation would almost certainly
+      identify the cyclist as the source given that only two people
+      have the relevant knowledge.
+    depends_on: [C1]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the cyclist to report the domestique's substance use to anti-doping authorities? Answer yes or no."
+  W2: "Should the cyclist disclose the domestique's use of the prohibited compound to the governing body? Answer yes or no."
+  W3: "Would you approve of the cyclist reporting their teammate and close friend to anti-doping authorities? Answer yes or no."

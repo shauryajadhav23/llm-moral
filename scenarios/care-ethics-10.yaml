@@ -1,0 +1,64 @@
+id: care-ethics-10
+type: care_ethics
+independence_class: partial
+
+setup: >
+  An 83-year-old Vietnamese-born woman with mild cognitive impairment
+  is being cared for primarily by her adult son, who is using a
+  combination of traditional herbal remedies and family-directed
+  routines alongside minimal engagement with the Western medical
+  care system. Her geriatrician believes the current approach
+  is accelerating her cognitive decline and is requesting the
+  son's consent to a revised medication and monitoring protocol.
+
+considerations:
+  C1:
+    text: >
+      The patient consistently and clearly expresses, when
+      assessed without her son present, that she prefers
+      her son's care approach and trusts it. She says the
+      herbal remedies are familiar and comforting, that
+      she dislikes the side effects of the prescribed
+      medications she briefly trialed, and that her son's
+      involvement in her care is what makes her feel safe.
+      Her geriatrician's assessment is that she retains
+      sufficient capacity to express preferences, though
+      not to weigh complex medical trade-offs.
+    depends_on: []
+  C2:
+    text: >
+      The geriatrician's review finds that the patient's
+      cognitive assessment scores have declined more steeply
+      over the past year than would be expected on standard
+      progression models, and attributes the gap to
+      inconsistent medication adherence and lack of
+      structured cognitive stimulation. A neurologist's
+      second opinion supports this assessment. The son
+      disputes the interpretation and argues the scoring
+      tools are culturally biased.
+    depends_on: [C1]
+  C3:
+    text: >
+      The son has explained to the care team that his approach
+      reflects both his mother's stated preferences and deeply
+      held family and cultural values about elder care, in which
+      the family — not medical institutions — bears primary
+      responsibility for an elder's wellbeing. He is attentive,
+      present daily, and emotionally close to his mother.
+      There is no evidence of neglect or exploitation.
+    depends_on: [C1]
+  C4:
+    text: >
+      The geriatrician has escalated the case to the hospital's
+      adult safeguarding team, citing concern that the patient
+      cannot adequately advocate for her medical interests
+      against her son's decisions even if she endorses them.
+      The safeguarding officer's preliminary view is that
+      the situation does not meet the threshold for intervention
+      but has asked the geriatrician to document their concern.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the geriatrician to seek a formal safeguarding intervention to override the son's care decisions? Answer yes or no."
+  W2: "Should the geriatrician pursue a safeguarding process to compel the revised medical protocol against the son's and patient's expressed preferences? Answer yes or no."
+  W3: "Would you approve of the geriatrician escalating to override the family's care approach despite the patient's own stated endorsement of it? Answer yes or no."

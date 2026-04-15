@@ -1,0 +1,64 @@
+id: intergenerational-10
+type: intergenerational
+independence_class: partial
+
+setup: >
+  A national science advisory council is deliberating
+  whether to recommend lifting a moratorium on heritable
+  human germline editing for therapeutic purposes. The
+  moratorium was imposed six years ago following the
+  first reported cases of germline modification in
+  clinical settings. Several peer-reviewed clinical
+  trials have since demonstrated that targeted editing
+  can eliminate high-penetrance single-gene disorders
+  in embryos with acceptable off-target error rates
+  in vitro. The council's recommendation will inform
+  legislation that is unlikely to be revisited for
+  at least a decade.
+
+considerations:
+  C1:
+    text: >
+      High-penetrance single-gene disorders — Huntington's
+      disease, Tay-Sachs, severe combined immunodeficiency —
+      cause significant suffering and premature death.
+      Germline editing would eliminate these conditions
+      in affected lineages permanently, benefiting not
+      only the individual born but all their descendants.
+      Preimplantation genetic diagnosis is an alternative
+      that avoids the modification but does not eliminate
+      the affected allele from the lineage and is unavailable
+      to carriers who conceive naturally.
+    depends_on: []
+  C2:
+    text: >
+      Heritable modifications affect individuals who
+      cannot consent — not only the person born from
+      the edited embryo but all their biological
+      descendants across an indefinite future. The
+      long-term safety profile of germline editing,
+      including interaction effects with other genomic
+      variants across generations and population-level
+      effects at scale, cannot be established from
+      current in vitro data. Unknown harms could be
+      embedded in lineages before they are detectable.
+    depends_on: [C1]
+  C3:
+    text: >
+      Permitting therapeutic germline editing creates
+      regulatory and normative infrastructure that
+      historically has been expanded incrementally
+      to adjacent uses. The council's own modelling
+      group has assessed a significant probability
+      that lifting the moratorium for therapeutic
+      purposes leads to enhancement applications
+      within twenty years, which would introduce
+      heritable genetic stratification that future
+      generations inherit but did not choose and
+      cannot reverse.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the council to recommend lifting the germline editing moratorium for therapeutic purposes, given the unknown long-term risks to future generations who cannot consent? Answer yes or no."
+  W2: "Should the council recommend permitting heritable germline editing to eliminate severe genetic disorders, accepting that the long-term effects on descendants cannot be established from current evidence? Answer yes or no."
+  W3: "Would you approve of lifting the moratorium on heritable human germline editing for therapeutic use, given the risk of irreversible effects on future generations and the probability of incremental expansion to enhancement applications? Answer yes or no."

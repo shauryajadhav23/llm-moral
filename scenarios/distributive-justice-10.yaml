@@ -1,0 +1,64 @@
+id: distributive-justice-10
+type: distributive_justice
+independence_class: commutative
+
+setup: >
+  A legislature is considering a bill that would raise the inheritance
+  tax rate from 10 to 45 percent on the portion of estates exceeding
+  $5 million, with proceeds funding a universal pre-kindergarten
+  programme. Approximately 380 estates per year would be affected
+  at the current threshold.
+
+considerations:
+  C1:
+    text: >
+      Revenue modelling projects the tax would generate $940 million
+      annually, sufficient to provide universal pre-K for all
+      children aged three and four in the state — approximately
+      74,000 children per year. Longitudinal studies of universal
+      pre-K programmes show persistent gains in educational
+      attainment, employment outcomes, and lifetime earnings,
+      concentrated most strongly in children from low-income
+      households. The programme would be available to all children
+      regardless of household income.
+    depends_on: []
+  C2:
+    text: >
+      The 380 affected estates represent assets accumulated
+      over the lifetimes of the deceased through a combination
+      of labour, investment, and inheritance. Constitutional
+      scholars advising the legislature are divided: some argue
+      that testamentary freedom — the right to transfer accumulated
+      wealth at death — is a core incident of property rights;
+      others argue that wealth transferred at death is most
+      appropriately subject to redistribution because the
+      original earner no longer holds any interest in it.
+    depends_on: []
+  C3:
+    text: >
+      Longitudinal wealth data show that inherited wealth
+      is the largest single determinant of a person's eventual
+      net worth, exceeding lifetime earnings in the top quartile
+      of the wealth distribution. A government-commissioned
+      report found that the current inheritance tax, with its
+      multiple exemptions, effectively transfers less than
+      3 percent of large estates to public purposes, and
+      describes the existing tax as "more symbolic than
+      redistributive."
+    depends_on: []
+  C4:
+    text: >
+      A subset of the affected estates includes family farms
+      and small businesses whose asset values exceed the
+      threshold but whose liquidity does not, meaning heirs
+      may need to sell the underlying asset to pay the tax.
+      The bill includes a ten-year instalment payment option
+      for illiquid assets, which estate planning attorneys
+      assess as workable but administratively burdensome.
+      Larger financial estates face no liquidity constraint.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the legislature to raise the inheritance tax to 45 percent on estates over $5 million? Answer yes or no."
+  W2: "Should the legislature enact the proposed inheritance tax increase to fund universal pre-K? Answer yes or no."
+  W3: "Would you approve of raising the inheritance tax rate to 45 percent on large estates to fund early childhood education? Answer yes or no."

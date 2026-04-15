@@ -1,0 +1,66 @@
+id: distributive-justice-09
+type: distributive_justice
+independence_class: commutative
+
+setup: >
+  A school district must redraw attendance zone boundaries to address
+  a large and documented quality gap between two elementary schools
+  three kilometres apart. The district must choose between two options:
+  redrawing boundaries to produce two demographically mixed schools,
+  or maintaining current boundaries while redirecting significant
+  additional resources to the lower-performing school.
+
+considerations:
+  C1:
+    text: >
+      The integration option would require approximately 1,100
+      students to change schools, including 600 from the higher-
+      performing school whose families chose their current home
+      partly on the basis of school assignment. Travel distances
+      for affected students would increase by an average of
+      2.4 kilometres each way. The district's equity office
+      has documented that school quality is currently strongly
+      correlated with household income and that the two schools
+      serve dramatically different socioeconomic populations.
+    depends_on: []
+  C2:
+    text: >
+      Research evidence on both approaches is mixed but directional:
+      demographic integration has the stronger evidence base for
+      improving outcomes at lower-performing schools and for
+      long-term social mobility, while resource-only interventions
+      in non-integrated schools have produced measurable but
+      smaller and less durable improvements in comparable districts.
+      The district's own pilot of a resource-only approach at
+      a third school produced a 9 percent improvement over
+      three years before gains plateaued.
+    depends_on: []
+  C3:
+    text: >
+      Families at the higher-performing school have organised
+      a vocal opposition to redistricting, including a legal
+      threat based on the argument that they chose housing
+      in the attendance zone in reasonable reliance on the
+      assignment. Legal counsel has assessed this argument
+      as unlikely to succeed but litigation would delay
+      implementation by one to two years and consume
+      administrative resources. Families at the lower-performing
+      school are more divided, with some welcoming integration
+      and others preferring improvement in their neighbourhood
+      school.
+    depends_on: []
+  C4:
+    text: >
+      The additional resource allocation required for the
+      resource-only option — estimated at $1.4 million annually
+      — would need to be sustained indefinitely to maintain
+      any gains and would crowd out planned system-wide
+      infrastructure improvements. The redistricting option
+      has no comparable ongoing cost beyond normal operations
+      once the transition is complete.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the district to proceed with the redistricting option over the objections of families at the higher-performing school? Answer yes or no."
+  W2: "Should the district redraw the attendance boundaries to create two integrated schools despite the disruption to current students? Answer yes or no."
+  W3: "Would you approve of the district choosing redistricting over the resource-only approach given the opposition from higher-performing school families? Answer yes or no."

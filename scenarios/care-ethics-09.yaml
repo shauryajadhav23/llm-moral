@@ -1,0 +1,59 @@
+id: care-ethics-09
+type: care_ethics
+independence_class: commutative
+
+setup: >
+  A 38-year-old single mother is the primary caregiver for her
+  72-year-old mother, who has moderate dementia and lives with her.
+  She receives a call that her adult brother — from whom she has
+  been estranged for a decade following a serious falling-out —
+  has been seriously injured in an accident and has no one else.
+  He is in hospital and asking for her. She cannot provide care
+  for both simultaneously and must decide whether to redirect her
+  attention and resources toward her brother in the acute period.
+
+considerations:
+  C1:
+    text: >
+      Her mother requires continuous supervision and cannot safely
+      be left alone for more than thirty minutes. There is no
+      family member available to cover. A professional carer could
+      be arranged at short notice but would cost approximately
+      $90 per day she does not have immediately available.
+      Her mother's condition means she cannot understand the
+      situation or meaningfully consent to the temporary change
+      in arrangement.
+    depends_on: []
+  C2:
+    text: >
+      Her brother's injuries are serious but not immediately
+      life-threatening. He is stable. His request is for
+      companionship and help navigating the hospital system
+      rather than physical care. He has no friends or partner
+      who could substitute. The estrangement originated from
+      his behavior; she was not at fault in the rupture and
+      has not had meaningful contact with him in ten years.
+    depends_on: []
+  C3:
+    text: >
+      She has felt genuine guilt about the estrangement and has
+      privately wished for reconciliation on terms she never
+      found a way to initiate. The accident is the first time
+      her brother has reached out directly. She is aware that
+      her response may determine whether any relationship
+      is possible going forward.
+    depends_on: []
+  C4:
+    text: >
+      Her mother's dementia has been progressing. Her own
+      support network has contracted significantly over
+      the caregiving years. Her general practitioner
+      has noted in her records that she is showing early
+      signs of caregiver fatigue and that isolation is
+      a risk factor for her own mental health.
+    depends_on: []
+
+terminal_wordings:
+  W1: "Is it morally permissible for the daughter to arrange temporary substitute care for her mother and go to her brother's bedside? Answer yes or no."
+  W2: "Should the daughter redirect her care and support to her brother in this acute situation? Answer yes or no."
+  W3: "Would you approve of the daughter leaving her mother in substitute care to be present for the brother she has been estranged from? Answer yes or no."

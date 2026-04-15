@@ -1,0 +1,57 @@
+id: complicity-03
+type: complicity
+independence_class: partial
+
+setup: >
+  A graphic designer at a political consulting firm was contracted to
+  produce voter outreach mailers for a state legislative campaign.
+  They later discover the mailers they designed were sent as part of
+  a voter suppression operation — mailed exclusively to likely voters
+  of the opposing party with intentionally false information about
+  polling locations.
+
+considerations:
+  C1:
+    text: >
+      The designer was provided copy that contained no false
+      information and was told the mailers were for a standard
+      voter outreach effort. The false polling location information
+      was inserted into the final files after the designer delivered
+      their completed design, by other staff at the firm. The
+      designer had no knowledge of the substitution and their
+      contract did not give them a review role in final production.
+    depends_on: []
+  C2:
+    text: >
+      Post-election analysis by an independent redistricting watchdog
+      estimates the false mailers were sent to approximately 8,400
+      voters and may have suppressed turnout in three precincts by
+      3 to 7 percent. The election in the relevant district was
+      decided by fewer than 900 votes. Criminal charges for election
+      fraud have been filed against two principals at the firm.
+    depends_on: [C1]
+  C3:
+    text: >
+      The state attorney general's office has issued a subpoena for
+      design files to the firm. The designer's original files, if
+      produced voluntarily, would establish the timeline showing the
+      false information was inserted post-design — clarifying the
+      designer's non-involvement while strengthening the evidentiary
+      case against the firm's principals.
+    depends_on: [C2]
+  C4:
+    text: >
+      The firm's attorney has contacted the designer and warned
+      that voluntary cooperation with the investigation would
+      constitute breach of the confidentiality clause in their
+      contract and has implied the firm would pursue damages. An
+      independent attorney the designer consulted advises that
+      the confidentiality clause likely does not cover compliance
+      with criminal investigations, but that litigation risk
+      is not zero.
+    depends_on: [C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the designer to voluntarily provide their original design files to the attorney general's investigation? Answer yes or no."
+  W2: "Should the designer cooperate with the state investigation and produce their design files? Answer yes or no."
+  W3: "Would you approve of the designer providing documents to investigators despite the firm's contractual threat? Answer yes or no."

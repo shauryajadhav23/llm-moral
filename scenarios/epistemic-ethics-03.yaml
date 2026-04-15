@@ -1,0 +1,55 @@
+id: epistemic-ethics-03
+type: epistemic_ethics
+independence_class: partial
+
+setup: >
+  A high school teacher discovers that the student who won the school's
+  top merit scholarship used an AI writing tool to compose the
+  application essay, which the scholarship rules explicitly prohibited.
+  The scholarship was announced two weeks ago. The student has since
+  declined their acceptance to a safety school, and that acceptance
+  has expired.
+
+considerations:
+  C1:
+    text: >
+      The teacher has clear evidence: the submitted essay's embedded
+      metadata identifies it as AI-generated, and the writing style
+      is inconsistent with all other written work the student has
+      produced in class over two years. The teacher has also reviewed
+      the scholarship rules, which state that all submitted materials
+      must be the student's own unaided work and that violation is
+      grounds for disqualification.
+    depends_on: []
+  C2:
+    text: >
+      The student is the first in their family to attend a four-year
+      university. The scholarship covers full tuition and is the
+      difference between the student attending college this year and
+      not attending. With the safety school acceptance expired, disclosure
+      now would likely mean the student does not enroll anywhere for
+      at least a year.
+    depends_on: []
+  C3:
+    text: >
+      During the review period, two other finalists submitted materials
+      that raised borderline rule-compliance concerns — one worked
+      extensively with a professional college counselor in a way that
+      approached the rule's limits on outside assistance. The scholarship
+      committee did not investigate those submissions and confirmed
+      the current winner without further review.
+    depends_on: [C1]
+  C4:
+    text: >
+      The scholarship committee's bylaws give teachers no formal
+      reporting obligation for violations discovered after award
+      finalization. The rules govern the application process; enforcement
+      after announcement is at the committee's discretion. Reporting
+      would require the teacher to initiate a voluntary disclosure to
+      the committee chair.
+    depends_on: [C1]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the teacher to report the AI essay violation to the scholarship committee? Answer yes or no."
+  W2: "Should the teacher disclose the scholarship rule violation to the committee chair? Answer yes or no."
+  W3: "Would you approve of the teacher reporting the student's AI use to the scholarship committee given these circumstances? Answer yes or no."

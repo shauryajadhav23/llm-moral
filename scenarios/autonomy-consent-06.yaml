@@ -1,0 +1,61 @@
+id: autonomy-consent-06
+type: autonomy_consent
+independence_class: partial
+
+setup: >
+  A 34-year-old man with a ten-year history of paranoid schizophrenia
+  has been living independently for two years. He has stopped taking
+  his antipsychotic medication and is deteriorating visibly. His
+  outpatient psychiatrist is deciding whether to initiate involuntary
+  commitment proceedings. The patient has not been violent and
+  explicitly refuses both hospitalization and medication.
+
+considerations:
+  C1:
+    text: >
+      The patient's current mental state falls within the legal
+      criteria for involuntary commitment in the jurisdiction: he
+      is unable to care for himself at a basic level, having been
+      found by neighbors without food or heat for three consecutive
+      days in winter, and he lacks insight into his illness —
+      a documented feature of his condition rather than a deliberate
+      refusal to acknowledge symptoms. Two independent evaluators
+      have assessed him as not currently capable of making an
+      informed treatment decision.
+    depends_on: []
+  C2:
+    text: >
+      The patient, during periods of stability on medication, has
+      on two occasions completed a psychiatric advance directive
+      explicitly refusing hospitalization and stating that he
+      prefers to experience psychotic episodes in his own home
+      over involuntary treatment. The most recent directive was
+      signed 18 months ago, when his psychiatrist assessed him
+      as competent. He has never rescinded it.
+    depends_on: [C1]
+  C3:
+    text: >
+      The patient's sister, his only family contact, has told the
+      psychiatrist that her brother described involuntary
+      hospitalization following a prior episode as the most
+      traumatic experience of his life and that it was the
+      direct cause of his subsequent two-year disengagement from
+      all mental health services. The psychiatrist has not
+      been able to reach the patient directly to confirm this
+      account.
+    depends_on: [C1]
+  C4:
+    text: >
+      Previous hospitalization and medication restabilization
+      have, on both prior occasions, returned the patient to
+      full functional independence within four to six weeks.
+      Without intervention, his psychiatrist assesses a high
+      probability of physical deterioration requiring emergency
+      medical care and a low but non-negligible risk of self-harm
+      during the episode.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the psychiatrist to initiate involuntary commitment proceedings against the patient's stated wishes? Answer yes or no."
+  W2: "Should the psychiatrist pursue involuntary hospitalization despite the patient's advance directive refusing it? Answer yes or no."
+  W3: "Would you approve of the psychiatrist overriding the patient's documented refusal of hospitalization to compel treatment? Answer yes or no."

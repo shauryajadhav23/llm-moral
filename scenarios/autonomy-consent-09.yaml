@@ -1,0 +1,59 @@
+id: autonomy-consent-09
+type: autonomy_consent
+independence_class: entangled
+
+setup: >
+  A deaf couple, both of whom have genetic deafness caused by a
+  recessive mutation in the GJB2 gene, is requesting preimplantation
+  genetic diagnosis to select an embryo carrying the deafness-causing
+  genotype. They wish their child to share their cultural identity.
+  The fertility clinic's ethics committee must decide whether to
+  authorize the selection.
+
+considerations:
+  C1:
+    text: >
+      The couple has articulated a clear and considered rationale:
+      they regard deafness not as a disability to be avoided but
+      as a cultural identity to be shared with their child. They
+      are members of a Deaf community with a distinct language,
+      social infrastructure, and self-conception. Their request is
+      not to harm the future child but to select a genetic profile
+      consistent with their own. They are competent adults with
+      no external pressure identified by the clinic's counselor.
+    depends_on: []
+  C2:
+    text: >
+      Selecting the deafness genotype would predictably result in a
+      child who cannot hear without assistive technology. Bioethicists
+      consulted by the committee are divided: some argue reproductive
+      autonomy encompasses selecting traits the parents value and
+      that deafness does not preclude a good life; others argue the
+      child would have a claim against any decision that forecloses
+      the capacity to hear when a hearing-capable embryo is available.
+    depends_on: [C1]
+  C3:
+    text: >
+      The clinic currently permits selection against genetic disease
+      and in favor of sex matching in specific medical contexts.
+      The ethics committee has no formal policy on selection
+      in favor of a non-pathological but function-limiting
+      genotype. Authorizing this case would set a precedent
+      applicable to future requests, including requests the
+      committee may not anticipate.
+    depends_on: [C1, C2]
+  C4:
+    text: >
+      Refusing the couple's request would require the clinic to
+      use embryos genetically capable of hearing, producing a
+      child who may not share their parents' cultural and linguistic
+      community in the same way. The couple has stated they will
+      pursue the selection at a clinic in a jurisdiction with
+      permissive rules if refused here, and will not seek
+      a hearing child from this clinic under any circumstances.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the clinic to authorize preimplantation selection of the deafness-associated genotype? Answer yes or no."
+  W2: "Should the ethics committee approve the couple's request to select an embryo carrying the genetic deafness profile? Answer yes or no."
+  W3: "Would you approve of the clinic facilitating embryo selection in favor of a deafness genotype at the couple's request? Answer yes or no."

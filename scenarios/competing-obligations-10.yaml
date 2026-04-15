@@ -1,0 +1,62 @@
+id: competing-obligations-10
+type: competing_obligations
+independence_class: partial
+
+setup: >
+  A university professor has served for three years as an informal
+  mentor to a doctoral student, building a relationship of trust in
+  which the student has disclosed personal struggles and academic
+  difficulties. The student is now under formal investigation for
+  alleged research misconduct. The university's investigation panel
+  has asked the professor to provide a formal statement about
+  private conversations relevant to the alleged misconduct.
+
+considerations:
+  C1:
+    text: >
+      The student disclosed to the professor, in what both understood
+      to be a private mentoring conversation, that they had taken
+      shortcuts in data collection that they knew were improper,
+      citing pressure from their supervisor and fear about their
+      visa status. The professor is the only person with direct
+      knowledge of this disclosure. The professor did not report
+      the disclosure at the time, believing it was a confidence
+      shared in a mentoring context and that the student would
+      self-correct.
+    depends_on: []
+  C2:
+    text: >
+      The investigation panel has found evidence of data fabrication
+      that, if confirmed, would affect published findings currently
+      cited in ongoing clinical trials. The panel's chair has told
+      the professor that their statement is material to determining
+      the scope of the misconduct and whether the published work
+      must be retracted. The professor's statement would likely
+      be decisive.
+    depends_on: [C1]
+  C3:
+    text: >
+      The student has contacted the professor and asked them not
+      to disclose the private conversation, reminding them of
+      the trust placed in the mentoring relationship. The student
+      has also noted that disclosure would almost certainly end
+      their academic career and result in visa consequences
+      that would force them to leave the country permanently.
+    depends_on: [C1]
+  C4:
+    text: >
+      The professor's university employment contract requires
+      cooperation with formal research integrity investigations.
+      However, university policy on mentoring relationships
+      includes a statement — non-binding and not formally
+      enacted — that mentors should treat disclosures made in
+      confidence as confidential unless they involve immediate
+      risk of harm. The professor's department head has said
+      informally that the policy does not apply to research
+      misconduct investigations.
+    depends_on: [C2, C3]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the professor to provide a full truthful statement to the investigation panel? Answer yes or no."
+  W2: "Should the professor disclose the student's private admission to the research misconduct investigation? Answer yes or no."
+  W3: "Would you approve of the professor breaking the confidence of the mentoring relationship to assist the formal investigation? Answer yes or no."

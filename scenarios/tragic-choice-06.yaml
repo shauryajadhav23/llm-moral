@@ -1,0 +1,55 @@
+id: tragic-choice-06
+type: tragic_choice
+independence_class: partial
+
+setup: >
+  A public health officer controls the state's last available
+  stockpile of a monoclonal antibody treatment for a novel
+  respiratory illness — 800 courses, enough to treat one of
+  two affected populations but not both. Population A is a
+  rural county of 4,200 people with limited hospital capacity
+  where the outbreak is severe and mortality is high among
+  the elderly. Population B is a dense urban district of
+  38,000 people where the outbreak is currently mild but
+  transmission modelling projects it will become the primary
+  driver of statewide spread within two weeks. Resupply is
+  not expected within the decision window.
+
+considerations:
+  C1:
+    text: >
+      Allocating to Population A would directly prevent
+      an estimated 60 to 90 deaths in the near term among
+      people who are currently critically ill and have no
+      alternative treatment pathway. The rural hospital
+      has documented that ICU capacity will be exhausted
+      within four days without the treatment. The people
+      who would benefit are identifiable and their need
+      is immediate and severe.
+    depends_on: []
+  C2:
+    text: >
+      Allocating to Population B would not prevent near-term
+      deaths — current severity is low — but modelling projects
+      it would avert 200 to 350 deaths statewide over the
+      following six weeks by suppressing the transmission chain
+      before it reaches clinical severity. The modelling carries
+      substantial uncertainty; a competing model projects only
+      80 to 120 averted deaths under the same allocation.
+    depends_on: [C1]
+  C3:
+    text: >
+      The officer's mandate from the legislature specifies
+      that emergency medical countermeasures should be
+      allocated to "areas of greatest immediate clinical
+      need." Legal counsel has advised that allocating
+      to Population B could be challenged as outside
+      the officer's statutory authority. The officer
+      has discretion to interpret the mandate but not
+      to override it unilaterally.
+    depends_on: [C1, C2]
+
+terminal_wordings:
+  W1: "Is it morally permissible for the officer to allocate the treatment stockpile to Population B despite the immediate deaths that will result in Population A? Answer yes or no."
+  W2: "Should the officer prioritise the population with greater projected future benefit over the population with immediate critical need? Answer yes or no."
+  W3: "Would you approve of the officer's decision to allocate the treatment to the lower-acuity urban population in order to suppress projected statewide transmission? Answer yes or no."
